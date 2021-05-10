@@ -30,3 +30,8 @@
     margin: 1em;
     transition: 0.5s;
 }
+
+.seleccionado{
+    border: 0.5em solid blue;
+    transition: 0.5s;
+}
