@@ -16,21 +16,20 @@ const cambiaPantalla = (foco) => {
 
 
 
-const luchador = (luchador) => {
+const luchadorSel = (luchador) => {
 
     if(team2.length < 2){
 
-        if(team1.length < 2){
-            equipo1.push(allPlayers[luchador]);
-            
+        if(team1.length < 3){
+            equipo1.push(listaPersonajes[luchador]);            
         } else {
             
-            equipo2.push(allPlayers[luchador]);
+            equipo2.push(listaPersonajes[luchador]);
 
-            if(equipo2.length == 2){
+            if(equipo2.length == 3){
                 console.log("ESTE ES EL TEAM1 ", equipo1);
                 console.log("ESTE ES EL TEAM2 ", equipo2);
-                cambiaFase("fase3");
+                cambiaFase("fase4");
             }            
         }        
         document.getElementById(fighter).onclick = "";
