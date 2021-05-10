@@ -14,8 +14,6 @@ const cambiaPantalla = (foco) => {
     }
 }
 
-
-
 const luchadorSel = (luchador) => {
 
     if(equipo2.length < 3){
