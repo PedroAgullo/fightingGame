@@ -15,3 +15,18 @@
     justify-content: center;
     align-items: center;
 }
+
+.personaje{
+    display:flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;   
+}
+
+.picFighter{
+    width: 12em;
+    height: 12em;
+    border: 0.5em solid white;
+    margin: 1em;
+    transition: 0.5s;
+}

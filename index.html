@@ -12,38 +12,52 @@
 
 <body>
     
-
+    <!-- PANTALLA INICIAL CON EL LOGO DEL JUEGO -->
     <section class="secView" id="pantalla1">
         <div class="intro">
             <img class="secView" src="img/titulo.jpg" alt="Imagen inicial." onclick="cambiaPantalla('pantalla2')">
         </div>
     </section>
 
-
+    <!-- PANTALLA DEL MENU PRINCIPAL -->
     <section class="secView" id="pantalla2" style="display:none">        
         <div class="menuPrincipal">
             <h1>MENÚ PRINCIPAL</h1>
-            <h3>1 VS 1</h3>
-            <h3>TEAM BATTLE</h3>
+            <h3 onclick="cambiaPantalla('pantalla3')">1 VS 1</h3>
+            <h3 onclick="cambiaPantalla('pantalla3')">TEAM BATTLE</h3>
             <h3>SCORE BOARD</h3>
         </div>
     </section>
 
-
+    <!-- PANTALLA ELECCION DE PERSONAJE -->
     <section class="secView" id="pantalla3" style="display:none">
+        <h1>SELECCION DE PERSONAJE</h1>
+        <div class="personaje">
+            <div class="avatar" id="1" onclick="chooseFighter(1)"><img class="picFighter" src="img/p1.png"></div>
+            <div class="avatar" id="2" onclick="chooseFighter(2)"><img class="picFighter" src="img/p2.png"></div>
+            <div class="avatar" id="3" onclick="chooseFighter(3)"><img class="picFighter" src="img/p3.png"></div>
+            <div class="avatar" id="4" onclick="chooseFighter(4)"><img class="picFighter" src="img/p4.png"></div>
+            <div class="avatar" id="5" onclick="chooseFighter(5)"><img class="picFighter" src="img/p5.png"></div>
+        </div>
     
-    
-    
+        <div class="personaje">
+            <div class="avatar" id="6" onclick="chooseFighter(6)"><img class="picFighter" src="img/p6.png"></div>
+            <div class="avatar" id="7" onclick="chooseFighter(7)"><img class="picFighter" src="img/p7.png"></div>
+            <div class="avatar" id="8" onclick="chooseFighter(8)"><img class="picFighter" src="img/p8.png"></div>
+            <div class="avatar" id="9" onclick="chooseFighter(9)"><img class="picFighter" src="img/p9.png"></div>
+            <div class="avatar" id="10" onclick="chooseFighter(10)"><img class="picFighter" src="img/p10.png"></div>
+        </div>
     </section>
 
 
 
+    <!-- PANTALLA ELECCION DE MAPA -->
     <section class="secView" id="pantalla4" style="display:none"></section>
 
-
+    <!-- PANTALLA DE LUCHA -->
     <section class="secView" id="pantalla5" style="display:none"></section>
 
-    
+    <!-- PANTALLA DE RESULTADO -->
     <section class="secView" id="pantalla6" style="display:none"></section> 
 
 
