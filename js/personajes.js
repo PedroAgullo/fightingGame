@@ -16,16 +16,16 @@ class Luchador{
 
 
 //Instancio luchadores
-let p1 = new Personaje("Shrek",30,10);
-let p2 = new Personaje("Burro",35,12);
-let p3 = new Personaje("Gato",25,20);
-let p4 = new Personaje("Fiona",40,8);
-let p5 = new Personaje("Frodo",30,10);
-let p6 = new Personaje("Slayer",35,12);
-let p7 = new Personaje("AmongUs",25,20);
-let p8 = new Personaje("Steve",40,8);
-let p9 = new Personaje("Dalsim",30,10);
-let p10 = new Personaje("EHonda",35,12);
+let p1 = new Luchador("Shrek",30,10);
+let p2 = new Luchador("Burro",35,12);
+let p3 = new Luchador("Gato",25,20);
+let p4 = new Luchador("Fiona",40,8);
+let p5 = new Luchador("Frodo",30,10);
+let p6 = new Luchador("Slayer",35,12);
+let p7 = new Luchador("AmongUs",25,20);
+let p8 = new Luchador("Steve",40,8);
+let p9 = new Luchador("Dhalsim",30,10);
+let p10 = new Luchador("EHonda",35,12);
 
 
 let listaPersonajes = {

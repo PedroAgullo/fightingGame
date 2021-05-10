@@ -18,9 +18,9 @@ const cambiaPantalla = (foco) => {
 
 const luchadorSel = (luchador) => {
 
-    if(team2.length < 2){
+    if(equipo2.length < 3){
 
-        if(team1.length < 3){
+        if(equipo1.length < 3){
             equipo1.push(listaPersonajes[luchador]);            
         } else {
             
@@ -29,10 +29,10 @@ const luchadorSel = (luchador) => {
             if(equipo2.length == 3){
                 console.log("ESTE ES EL TEAM1 ", equipo1);
                 console.log("ESTE ES EL TEAM2 ", equipo2);
-                cambiaFase("fase4");
+                cambiaPantalla("pantalla4");
             }            
         }        
-        document.getElementById(fighter).onclick = "";
-        document.getElementById(fighter).className = "seleccionado";        
+        document.getElementById(luchador).onclick = "";
+        document.getElementById(luchador).className = "seleccionado";        
     }        
 }
