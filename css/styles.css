@@ -18,9 +18,9 @@
 
 .personaje{
     display:flex;
-       flex-direction: row;
-       justify-content: center;
-       align-items: center;   
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
 }
 
 .picFighter{
@@ -29,10 +29,25 @@
     border: 0.5em solid white;
     margin: 1em;
     transition: 0.5s;
+    border-radius:2em;
 }
 
 .seleccionado{
     border: 0.5em solid blue;
     transition: 0.5s;
+}
+
+.seleccionados{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+}
+
+.equipos{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
 }
 
