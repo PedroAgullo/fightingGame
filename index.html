@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/lucha.css">
+    <link rel="stylesheet" href="css/lucha.css
+    ">
 </head>
 
 <body>
@@ -76,15 +77,19 @@
     <!-- PANTALLA DE LUCHA -->
     <section class="secView" id="pantalla5" style="display:none">
         <img class="fondoPantalla" id="escenario" src="" alt="Escenario de lucha.">   
-        
+
         <div class="general">
+
+
             <div class="score"></div>
             <div class="vida"></div>
             <div class="divisor"></div>
             <div class="personajes">
                 <div class="team1"></div>
                 <div class="accionScreen">
-                    <button id="boton"></button>
+                    <button class="boton" id="boton1" onclick="comienzaPartida(1)" >T1 - Attack!</button>
+                    <button class="boton" id="boton2" onclick="comienzaPartida(2)" >T2 - Attack!</button>
+
                 </div>
                 <div class="team2"></div>
             </div>
