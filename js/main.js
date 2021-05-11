@@ -1,6 +1,8 @@
 let equipo1 = [];
 let equipo2 = [];
-
+let j1 = [];
+let j2 = [];
+let ronda = 1;
 
 const cambiaPantalla = (foco) => {
     let arrPantalla = ["pantalla1", "pantalla2", "pantalla3", "pantalla4", "pantalla5", "pantalla6"];
@@ -50,4 +52,13 @@ const luchadorSel = (luchador) => {
         document.getElementById(luchador).onclick = "";
         document.getElementById(luchador).className = "seleccionado";        
     }        
+}
+
+const comienzaPartida = () => {
+    let j1 = equipo1[0];
+    let j2 = equipo2[0];
+
+    
+
+
 }
