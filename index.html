@@ -31,32 +31,32 @@
     <section class="secView" id="pantalla3" style="display:none">
         <h1>SELECCION DE PERSONAJE</h1>
         <div class="personaje">
-            <div class="avatar" id="1" onclick="luchadorSel(1)"><img class="picFighter" src="img/p1.png"></div>
-            <div class="avatar" id="2" onclick="luchadorSel(2)"><img class="picFighter" src="img/p2.png"></div>
-            <div class="avatar" id="3" onclick="luchadorSel(3)"><img class="picFighter" src="img/p3.png"></div>
-            <div class="avatar" id="4" onclick="luchadorSel(4)"><img class="picFighter" src="img/p4.png"></div>
-            <div class="avatar" id="5" onclick="luchadorSel(5)"><img class="picFighter" src="img/p5.png"></div>
+            <div id="1" onclick="luchadorSel(1)"><img class="picFighter" src="img/p1.png"></div>
+            <div id="2" onclick="luchadorSel(2)"><img class="picFighter" src="img/p2.png"></div>
+            <div id="3" onclick="luchadorSel(3)"><img class="picFighter" src="img/p3.png"></div>
+            <div id="4" onclick="luchadorSel(4)"><img class="picFighter" src="img/p4.png"></div>
+            <div id="5" onclick="luchadorSel(5)"><img class="picFighter" src="img/p5.png"></div>
         </div>
     
         <div class="personaje">
-            <div class="avatar" id="6" onclick="luchadorSel(6)"><img class="picFighter" src="img/p6.png"></div>
-            <div class="avatar" id="7" onclick="luchadorSel(7)"><img class="picFighter" src="img/p7.png"></div>
-            <div class="avatar" id="8" onclick="luchadorSel(8)"><img class="picFighter" src="img/p8.png"></div>
-            <div class="avatar" id="9" onclick="luchadorSel(9)"><img class="picFighter" src="img/p9.png"></div>
-            <div class="avatar" id="10" onclick="luchadorSel(10)"><img class="picFighter" src="img/p10.png"></div>
+            <div id="6" onclick="luchadorSel(6)"><img class="picFighter" src="img/p6.png"></div>
+            <div id="7" onclick="luchadorSel(7)"><img class="picFighter" src="img/p7.png"></div>
+            <div id="8" onclick="luchadorSel(8)"><img class="picFighter" src="img/p8.png"></div>
+            <div id="9" onclick="luchadorSel(9)"><img class="picFighter" src="img/p9.png"></div>
+            <div id="10" onclick="luchadorSel(10)"><img class="picFighter" src="img/p10.png"></div>
         </div>
 
         <div class="seleccionados">
             <div class="equipos">
-                <div class="avatar"><img class="picFighter" src="img/p1.png"></div>
-                <div class="avatar"><img class="picFighter" src="img/p2.png"></div>
-                <div class="avatar"><img class="picFighter" src="img/p3.png"></div>
+                <div><img class="picFighter" src=""></div>
+                <div><img class="picFighter" src=""></div>
+                <div><img class="picFighter" src=""></div>
             </div>
             <div class="vs"><h1>VS</h1></div>
             <div class="equipos">
-                <div class="avatar"><img class="picFighter" src="img/p1.png"></div>
-                <div class="avatar"><img class="picFighter" src="img/p2.png"></div>
-                <div class="avatar"><img class="picFighter" src="img/p3.png"></div>
+                <div><img class="picFighter" src=""></div>
+                <div><img class="picFighter" src=""></div>
+                <div><img class="picFighter" src=""></div>
             </div>
         </div>
     </section>
@@ -67,18 +67,21 @@
     <section class="secView" id="pantalla4" style="display:none">
         <h1>SELECCION DE ESCENARIO</h1>
         <div class="personaje">
-            <div class="avatar" id="01" onclick="escenarioSel(1)"><img class="picFighter" src="img/escenario1.gif"></div>
-            <div class="avatar" id="02" onclick="escenarioSel(2)"><img class="picFighter" src="img/escenario2.gif"></div>
-            <div class="avatar" id="03" onclick="escenarioSel(3)"><img class="picFighter" src="img/escenario3.gif"></div>
-            <div class="avatar" id="04" onclick="escenarioSel(4)"><img class="picFighter" src="img/escenario4.gif"></div>
-            <div class="avatar" id="05" onclick="escenarioSel(5)"><img class="picFighter" src="img/escenario5.gif"></div>
+            <div id="00" onclick="escenarioSel(0, 'escenario')"><img class="picFighter" src="img/escenario0.gif"></div>
+            <div id="01" onclick="escenarioSel(1, 'escenario')"><img class="picFighter" src="img/escenario1.gif"></div>
+            <div id="02" onclick="escenarioSel(2, 'escenario')"><img class="picFighter" src="img/escenario2.gif"></div>
+            <div id="03" onclick="escenarioSel(3, 'escenario')"><img class="picFighter" src="img/escenario3.gif"></div>
+            <div id="04" onclick="escenarioSel(4, 'escenario')"><img class="picFighter" src="img/escenario4.gif"></div>
         </div>
 
 
     </section>
 
     <!-- PANTALLA DE LUCHA -->
-    <section class="secView" id="pantalla5" style="display:none"></section>
+    <section class="secView" id="pantalla5" style="display:none">
+        <img id="escenario" src="img/escenario1.gif" alt="Escenario de lucha.">
+    
+    </section>
 
     <!-- PANTALLA DE RESULTADO -->
     <section class="secView" id="pantalla6" style="display:none"></section> 

@@ -3,7 +3,6 @@
     margin: 0em;
 }
 
-
 .secView{
     height: 100vh;
     width: 100vw;
@@ -24,9 +23,9 @@
 }
 
 .picFighter{
-    width: 12em;
-    height: 12em;
-    border: 0.5em solid white;
+    width: 10em;
+    height: 10em;
+    border: 0.5em solid grey;
     margin: 1em;
     transition: 0.5s;
     border-radius:2em;
@@ -51,3 +50,7 @@
     align-items: center;  
 }
 
+.escenario{
+    height: 100vh;
+    width: 100vw;
+}

@@ -3,6 +3,8 @@ let equipo2 = [];
 
 
 
+
+
 const cambiaPantalla = (foco) => {
     let arrPantalla = ["pantalla1", "pantalla2", "pantalla3", "pantalla4", "pantalla5", "pantalla6"];
 
@@ -14,12 +16,21 @@ const cambiaPantalla = (foco) => {
     }
 }
 
+const escenarioSel = (mapa, escenario) => {
+    let arrEscenarios = ["img/escenario0.gif", "img/escenario1.gif", "img/escenario2.gif", "img/escenario3.gif", "img/escenario4.gif" ];
+    
+    document.getElementById("escenario").src=arrEscenarios[mapa];
+    cambiaPantalla("pantalla5");
+    
+}
+
 const luchadorSel = (luchador) => {
 
     if(equipo2.length < 3){
 
         if(equipo1.length < 3){
-            equipo1.push(listaPersonajes[luchador]);            
+            equipo1.push(listaPersonajes[luchador]);
+
         } else {
             
             equipo2.push(listaPersonajes[luchador]);
@@ -34,3 +45,4 @@ const luchadorSel = (luchador) => {
         document.getElementById(luchador).className = "seleccionado";        
     }        
 }
+
