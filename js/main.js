@@ -73,9 +73,9 @@ const comienzaPartida = (player) => {
     }
 
 
-    if (equipo1[0].vida <= 0){
+    if (equipo2[0].vida <= 0){
         console.log("Ha ganado la partida el equipo 1 con el luchador: ", equipo1[0].nombre);
-    }else if(equipo2[0].vida <= 0){
+    }else if(equipo1[0].vida <= 0){
         console.log("Ha ganado la partida el equipo 2 con el luchador: ", equipo2[0].nombre);
     }
 
@@ -89,11 +89,11 @@ const cambiarBoton = (player) => {
     if(player == 1){
         console.log("Paso por arriba");
         document.getElementById('boton1').disabled = 'true';
-        document.getElementById('boton2').disabled = 'false';
+        document.getElementById('boton2').disabled = '';
 
     }else if (player == 2){
         console.log("Paso por abajo");
-        document.getElementById('boton1').disabled = 'false';
+        document.getElementById('boton1').disabled = '';
         document.getElementById('boton2').disabled = 'true';
     }
 }
