@@ -10,6 +10,7 @@
 .fondoPantalla{
     height: 100vh;
     width: 100vw;
+    
 }
 
 .menuPrincipal{
@@ -27,17 +28,30 @@
 }
 
 .picFighter{
-    width: 10em;
-    height: 10em;
-    border: 0.5em solid grey;
+    width: 8em;
+    height: 8em;
     margin: 1em;
     transition: 0.5s;
-    border-radius:2em;
+    border-radius:0.5em;    
+}
+
+.picStage{
+    width: 8em;
+    height: 8em;
+    margin: 1em;
+    transition: 0.5s;
+    border-radius:0.5em;  
+}
+
+.picFighterSeleccionado{
+    filter: grayscale(100%);
+
 }
 
 .seleccionado{
-    border: 0.5em solid blue;
     transition: 0.5s;
+    filter: grayscale(100%);
+
 }
 
 .seleccionados{

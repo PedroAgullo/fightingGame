@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/">
 </head>
 
 <body>
@@ -64,17 +65,39 @@
     <section class="secView" id="pantalla4" style="display:none">
         <h1>SELECCION DE ESCENARIO</h1>
         <div class="personaje">
-            <div id="00" onclick="escenarioSel(0, 'escenario')"><img class="picFighter" src="img/escenario0.gif"></div>
-            <div id="01" onclick="escenarioSel(1, 'escenario')"><img class="picFighter" src="img/escenario1.gif"></div>
-            <div id="02" onclick="escenarioSel(2, 'escenario')"><img class="picFighter" src="img/escenario2.gif"></div>
-            <div id="03" onclick="escenarioSel(3, 'escenario')"><img class="picFighter" src="img/escenario3.gif"></div>
-            <div id="04" onclick="escenarioSel(4, 'escenario')"><img class="picFighter" src="img/escenario4.gif"></div>
+            <div id="00" onclick="escenarioSel(0, 'escenario')"><img class="picStage" src="img/escenario0.gif"></div>
+            <div id="01" onclick="escenarioSel(1, 'escenario')"><img class="picStage" src="img/escenario1.gif"></div>
+            <div id="02" onclick="escenarioSel(2, 'escenario')"><img class="picStage" src="img/escenario2.gif"></div>
+            <div id="03" onclick="escenarioSel(3, 'escenario')"><img class="picStage" src="img/escenario3.gif"></div>
+            <div id="04" onclick="escenarioSel(4, 'escenario')"><img class="picStage" src="img/escenario4.gif"></div>
         </div>
     </section>
 
     <!-- PANTALLA DE LUCHA -->
     <section class="secView" id="pantalla5" style="display:none">
-        <img class="fondoPantalla" id="escenario" src="" alt="Escenario de lucha.">    
+<!--        
+        <img class="fondoPantalla" id="escenario" src="" alt="Escenario de lucha.">   
+         -->
+        
+        <div class="general">
+            <div class="score"></div>
+            <div class="vida"></div>
+            <div class="divisor"></div>
+            <div class="personajes">
+                <div class="team1"></div>
+                <div class="accionScreen">
+                    <button id="boton"></button>
+                </div>
+                <div class="team2"></div>
+            </div>
+            <div class="abajo"></div>
+
+
+
+        </div>
+
+
+
     </section>
 
     <!-- PANTALLA DE RESULTADO -->

@@ -22,7 +22,7 @@ let p6 = new Luchador("Slayer",35,12,"img/p6.png");
 let p7 = new Luchador("AmongUs",25,20,"img/p7.png");
 let p8 = new Luchador("Steve",40,8,"img/p8.png");
 let p9 = new Luchador("Dhalsim",30,10,"img/p9.png");
-let p10 = new Luchador("EHonda",35,12,"img/p9.png");
+let p10 = new Luchador("EHonda",35,12,"img/p10.png");
 
 let listaPersonajes = {
     "1" : p1,

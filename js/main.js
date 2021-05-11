@@ -18,9 +18,6 @@ const escenarioSel = (mapa, escenario) => {
     
     document.getElementById("escenario").src=arrEscenarios[mapa];
     cambiaPantalla("pantalla5");
-    // console.log("ESTE ES EL TEAM1 ", equipo1);
-    // console.log("ESTE ES EL TEAM2 ", equipo2);
-    
 }
 
 
@@ -34,7 +31,6 @@ const luchadorSel = (luchador) => {
             let seleccionado = "select" + (equipo1.length + 1);
             equipo1.push(listaPersonajes[luchador]);
             document.getElementById(seleccionado).src=equipo1[i].imagen;
-            console.log("Seleccionado: ", seleccionado);
             console.log(i);
             i++;
 
@@ -42,13 +38,12 @@ const luchadorSel = (luchador) => {
             let seleccionado = "select" + ((equipo1.length + equipo2.length) + 1);            
             equipo2.push(listaPersonajes[luchador]);
             document.getElementById(seleccionado).src=equipo2[x].imagen;
-            console.log("Seleccionado: ", seleccionado);
             x++;
 
             if(equipo2.length == 3){
                 setTimeout(() => {
                     cambiaPantalla("pantalla4");
-                }, 3000);
+                }, 2000);
             }
                         
         }        
