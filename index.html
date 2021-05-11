@@ -13,7 +13,7 @@
     <!-- PANTALLA INICIAL CON EL LOGO DEL JUEGO -->
     <section class="secView" id="pantalla1">
         <div class="intro">
-            <img class="secView" src="img/titulo.jpg" alt="Imagen inicial." onclick="cambiaPantalla('pantalla2')">
+            <img class="fondoPantalla" src="img/titulo.jpg" alt="Imagen inicial." onclick="cambiaPantalla('pantalla2')">
         </div>
     </section>
 
@@ -61,8 +61,6 @@
         </div>
     </section>
 
-
-
     <!-- PANTALLA ELECCION DE MAPA -->
     <section class="secView" id="pantalla4" style="display:none">
         <h1>SELECCION DE ESCENARIO</h1>
@@ -73,14 +71,11 @@
             <div id="03" onclick="escenarioSel(3, 'escenario')"><img class="picFighter" src="img/escenario3.gif"></div>
             <div id="04" onclick="escenarioSel(4, 'escenario')"><img class="picFighter" src="img/escenario4.gif"></div>
         </div>
-
-
     </section>
 
     <!-- PANTALLA DE LUCHA -->
     <section class="secView" id="pantalla5" style="display:none">
-        <img id="escenario" src="img/escenario1.gif" alt="Escenario de lucha.">
-    
+        <img class="fondoPantalla" id="escenario" src="" alt="Escenario de lucha.">    
     </section>
 
     <!-- PANTALLA DE RESULTADO -->
