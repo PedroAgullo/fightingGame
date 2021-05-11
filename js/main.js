@@ -23,22 +23,34 @@ const escenarioSel = (mapa, escenario) => {
     
 }
 
-const luchadorSel = (luchador) => {
 
+let i = 0;
+let x = 0;
+const luchadorSel = (luchador) => {
+    
     if(equipo2.length < 3){
 
         if(equipo1.length < 3){
+            let seleccionado = "select" + (equipo1.length + 1);
             equipo1.push(listaPersonajes[luchador]);
-            document.getElementById("select1").src= equipo1[0].imagen;
+            document.getElementById(seleccionado).src=equipo1[i].imagen;
+            console.log("Seleccionado: ", seleccionado);
+            console.log(i);
+            i++;
 
         } else {
-            
+            let seleccionado = "select" + ((equipo1.length + equipo2.length) + 1);            
             equipo2.push(listaPersonajes[luchador]);
+            document.getElementById(seleccionado).src=equipo2[x].imagen;
+            console.log("Seleccionado: ", seleccionado);
+            x++;
 
             if(equipo2.length == 3){
-
-                cambiaPantalla("pantalla4");
-            }            
+                setTimeout(() => {
+                    cambiaPantalla("pantalla4");
+                }, 3000);
+            }
+                        
         }        
         document.getElementById(luchador).onclick = "";
         document.getElementById(luchador).className = "seleccionado";        
