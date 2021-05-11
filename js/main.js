@@ -2,9 +2,6 @@ let equipo1 = [];
 let equipo2 = [];
 
 
-
-
-
 const cambiaPantalla = (foco) => {
     let arrPantalla = ["pantalla1", "pantalla2", "pantalla3", "pantalla4", "pantalla5", "pantalla6"];
 
@@ -21,6 +18,8 @@ const escenarioSel = (mapa, escenario) => {
     
     document.getElementById("escenario").src=arrEscenarios[mapa];
     cambiaPantalla("pantalla5");
+    // console.log("ESTE ES EL TEAM1 ", equipo1);
+    // console.log("ESTE ES EL TEAM2 ", equipo2);
     
 }
 
@@ -30,14 +29,14 @@ const luchadorSel = (luchador) => {
 
         if(equipo1.length < 3){
             equipo1.push(listaPersonajes[luchador]);
+            document.getElementById("select1").src= equipo1[0].imagen;
 
         } else {
             
             equipo2.push(listaPersonajes[luchador]);
 
             if(equipo2.length == 3){
-                console.log("ESTE ES EL TEAM1 ", equipo1);
-                console.log("ESTE ES EL TEAM2 ", equipo2);
+
                 cambiaPantalla("pantalla4");
             }            
         }        
@@ -45,4 +44,3 @@ const luchadorSel = (luchador) => {
         document.getElementById(luchador).className = "seleccionado";        
     }        
 }
-
