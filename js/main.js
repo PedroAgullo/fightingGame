@@ -18,7 +18,7 @@ const cambiaPantalla = (foco) => {
 const escenarioSel = (mapa, escenario) => {
     let arrEscenarios = ["img/escenario0.gif", "img/escenario1.gif", "img/escenario2.gif", "img/escenario3.gif", "img/escenario4.gif" ];
     
-    document.getElementById("escenario").src=arrEscenarios[mapa];
+    //document.getElementById("escenario").src=arrEscenarios[mapa];
     cambiaPantalla("pantalla5");
 }
 
@@ -49,6 +49,7 @@ const luchadorSel = (luchador) => {
                         
         }        
         document.getElementById(luchador).onclick = "";
+        
         document.getElementById(luchador).className = "seleccionado";        
     }        
 }
@@ -106,13 +107,13 @@ const vsSel = (luchador) => {
 
         if(equipo1.length < 1){
 
-            let seleccionado = "select11";
+            let seleccionado = "select7";
             equipo1.push(listaPersonajes[luchador]);
             document.getElementById(seleccionado).src=equipo1[i].imagen;
             i++;
 
         } else {
-            let seleccionado = "select12";            
+            let seleccionado = "select8";            
             equipo2.push(listaPersonajes[luchador]);
             document.getElementById(seleccionado).src=equipo2[x].imagen;
             x++;
@@ -125,6 +126,48 @@ const vsSel = (luchador) => {
                         
         }        
         document.getElementById(luchador).onclick = "";
-        document.getElementById(luchador).className = "seleccionado";        
+        document.getElementById(luchador + 10).className = "seleccionado";        
     }        
+}
+
+
+
+
+const reset = () => {
+    cambiaPantalla("pantalla2");
+    equipo1 = [];
+    equipo2 = [];
+
+    //Reiniciamos las imagenes de los luchadores.
+    for(let j=1; j <= 20; j++){
+        let num = j.toString();
+        document.getElementById(num).className = "picFighter";   
+//        document.getElementById(num).style.display = "initial";
+        
+       
+        if(j < 11){
+            let num = j.toString();
+            document.getElementById(num).onclick = "luchadorSel(", j,")";
+            console.log(document.getElementById(j).onclick);
+        }else if(j >=11 && j<=20){
+
+        }
+
+
+
+
+    }
+
+    //Reiniciamos las posiciones de los equipos.
+    for(let j=0; j<= 4; j++){
+
+
+    }
+
+
+    //Reiniciamos la pantalla seleccionada.
+
+    console.log("Equipo 1: ", equipo1);
+    console.log("Equipo 2: ", equipo2);
+
 }

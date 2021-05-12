@@ -29,7 +29,44 @@
         </div>
     </section>
 
-    <!-- PANTALLA ELECCION DE PERSONAJE -->
+
+
+    <!-- PANTALLA 1 VS 1 -->
+
+    <section class="secView" id="pantalla7" style="display:none">
+        <h1>SELECCION DE PERSONAJE</h1>
+        <div class="personaje">
+            <div id="11" onclick="vsSel(1)"><img class="picFighter" src="img/p1.png"></div>
+            <div id="12" onclick="vsSel(2)"><img class="picFighter" src="img/p2.png"></div>
+            <div id="13" onclick="vsSel(3)"><img class="picFighter" src="img/p3.png"></div>
+            <div id="14" onclick="vsSel(4)"><img class="picFighter" src="img/p4.png"></div>
+            <div id="15" onclick="vsSel(5)"><img class="picFighter" src="img/p5.png"></div>
+        </div>
+    
+        <div class="personaje">
+            <div id="16" onclick="vsSel(6)"><img class="picFighter" src="img/p6.png"></div>
+            <div id="17" onclick="vsSel(7)"><img class="picFighter" src="img/p7.png"></div>
+            <div id="18" onclick="vsSel(8)"><img class="picFighter" src="img/p8.png"></div>
+            <div id="19" onclick="vsSel(9)"><img class="picFighter" src="img/p9.png"></div>
+            <div id="20" onclick="vsSel(10)"><img class="picFighter" src="img/p10.png"></div>
+        </div>
+
+        <div class="seleccionados">
+            <div class="equipos">
+                <div><img id="select7" class="picFighter" src="img/white.png"></div>
+            </div>
+            <div class="vs"><h1>VS</h1></div>
+            <div class="equipos">
+                <div><img id="select8" class="picFighter" src="img/white.png"></div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- PANTALLA ELECCION DE PERSONAJE TEAM BATTLE-->
     <section class="secView" id="pantalla3" style="display:none">
         <h1>SELECCION DE PERSONAJE</h1>
         <div class="personaje">
@@ -50,15 +87,15 @@
 
         <div class="seleccionados">
             <div class="equipos">
-                <div><img id="select1" class="picFighter" src=""></div>
-                <div><img id="select2" class="picFighter" src=""></div>
-                <div><img id="select3" class="picFighter" src=""></div>
+                <div><img id="select1" class="picFighter" src="img/white.png"></div>
+                <div><img id="select2" class="picFighter" src="img/white.png"></div>
+                <div><img id="select3" class="picFighter" src="img/white.png"></div>
             </div>
             <div class="vs"><h1>VS</h1></div>
             <div class="equipos">
-                <div><img id="select4" class="picFighter" src=""></div>
-                <div><img id="select5" class="picFighter" src=""></div>
-                <div><img id="select6" class="picFighter" src=""></div>
+                <div><img id="select4" class="picFighter" src="/img/white.png"></div>
+                <div><img id="select5" class="picFighter" src="/img/white.png"></div>
+                <div><img id="select6" class="picFighter" src="/img/white.png"></div>
             </div>
         </div>
     </section>
@@ -77,9 +114,9 @@
 
     <!-- PANTALLA DE LUCHA -->
     <section class="secView" id="pantalla5" style="display:none">
-        <img class="fondoPantalla" id="escenario" src="" alt="Escenario de lucha.">   
 
         <div class="general">
+            <!-- <img class="fondoPantalla" id="escenario" src="" alt="Escenario de lucha.">    -->
 
 
             <div class="score"></div>
@@ -103,43 +140,12 @@
         <div class="resultado">
             <h1>HA TERMINADO LA PARTIDA</h1>
 
-            <h1>PULSA AQUI PARA EMPEZAR OTRA</h1>
+            <h1 onclick="reset()">PULSA AQUI PARA EMPEZAR OTRA</h1>
         </div>
     </section> 
 
 
 
-    <!-- PANTALLA 1 VS 1 -->
-
-    <section class="secView" id="pantalla7" style="display:none">
-        <h1>SELECCION DE PERSONAJE</h1>
-        <div class="personaje">
-            <div id="1" onclick="vsSel(1)"><img class="picFighter" src="img/p1.png"></div>
-            <div id="2" onclick="vsSel(2)"><img class="picFighter" src="img/p2.png"></div>
-            <div id="3" onclick="vsSel(3)"><img class="picFighter" src="img/p3.png"></div>
-            <div id="4" onclick="vsSel(4)"><img class="picFighter" src="img/p4.png"></div>
-            <div id="5" onclick="vsSel(5)"><img class="picFighter" src="img/p5.png"></div>
-        </div>
-    
-        <div class="personaje">
-            <div id="6" onclick="vsSel(6)"><img class="picFighter" src="img/p6.png"></div>
-            <div id="7" onclick="vsSel(7)"><img class="picFighter" src="img/p7.png"></div>
-            <div id="8" onclick="vsSel(8)"><img class="picFighter" src="img/p8.png"></div>
-            <div id="9" onclick="vsSel(9)"><img class="picFighter" src="img/p9.png"></div>
-            <div id="10" onclick="vsSel(10)"><img class="picFighter" src="img/p10.png"></div>
-        </div>
-
-        <div class="seleccionados">
-            <div class="equipos">
-                <div><img id="select11" class="picFighter" src=""></div>
-            </div>
-            <div class="vs"><h1>VS</h1></div>
-            <div class="equipos">
-                <div><img id="select12" class="picFighter" src=""></div>
-
-            </div>
-        </div>
-    </section>
 
 
 

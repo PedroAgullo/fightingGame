@@ -32,7 +32,9 @@
     height: 8em;
     margin: 1em;
     transition: 0.5s;
-    border-radius:0.5em;    
+    border-radius:0.5em; 
+    filter: grayscale(0%) blur(0px);
+   
 }
 
 .picStage{
@@ -43,13 +45,10 @@
     border-radius:0.5em;  
 }
 
-.picFighterSeleccionado{
-    filter: grayscale(100%);
-}
 
 .seleccionado{
     transition: 0.5s;
-    filter: grayscale(100%);
+    filter: grayscale(100%) blur(2px);
 
 }
 
@@ -77,9 +76,8 @@
 .general{
     height: 100vh;
     width: 100vw;
-    position:absolute; 
-    z-index:1;
-    background-image: url("img/escenario4.gif");
+   
+   
 }
 
 /* .pantalla5{
