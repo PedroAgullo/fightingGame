@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/lucha.css">
+
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/lucha.css
-    ">
 </head>
 
 <body>
@@ -22,9 +22,10 @@
     <section class="secView" id="pantalla2" style="display:none">        
         <div class="menuPrincipal">
             <h1>MENÚ PRINCIPAL</h1>
-            <h3 onclick="cambiaPantalla('pantalla3')">1 VS 1</h3>
-            <h3 onclick="cambiaPantalla('pantalla3')">TEAM BATTLE</h3>
-            <h3>SCORE BOARD</h3>
+            <br>
+            <h1 onclick="cambiaPantalla('pantalla7')">1 VS 1</h1>
+            <h1 onclick="cambiaPantalla('pantalla3')">TEAM BATTLE</h1>
+            <h1>SCORE BOARD</h1>
         </div>
     </section>
 
@@ -94,17 +95,53 @@
                 <div class="team2"></div>
             </div>
             <div class="abajo"></div>
-
-
-
         </div>
-
-
-
     </section>
 
     <!-- PANTALLA DE RESULTADO -->
-    <section class="secView" id="pantalla6" style="display:none"></section> 
+    <section class="secView" id="pantalla6" style="display:none">
+        <div class="resultado">
+            <h1>HA TERMINADO LA PARTIDA</h1>
+
+            <h1>PULSA AQUI PARA EMPEZAR OTRA</h1>
+        </div>
+    </section> 
+
+
+
+    <!-- PANTALLA 1 VS 1 -->
+
+    <section class="secView" id="pantalla7" style="display:none">
+        <h1>SELECCION DE PERSONAJE</h1>
+        <div class="personaje">
+            <div id="1" onclick="vsSel(1)"><img class="picFighter" src="img/p1.png"></div>
+            <div id="2" onclick="vsSel(2)"><img class="picFighter" src="img/p2.png"></div>
+            <div id="3" onclick="vsSel(3)"><img class="picFighter" src="img/p3.png"></div>
+            <div id="4" onclick="vsSel(4)"><img class="picFighter" src="img/p4.png"></div>
+            <div id="5" onclick="vsSel(5)"><img class="picFighter" src="img/p5.png"></div>
+        </div>
+    
+        <div class="personaje">
+            <div id="6" onclick="vsSel(6)"><img class="picFighter" src="img/p6.png"></div>
+            <div id="7" onclick="vsSel(7)"><img class="picFighter" src="img/p7.png"></div>
+            <div id="8" onclick="vsSel(8)"><img class="picFighter" src="img/p8.png"></div>
+            <div id="9" onclick="vsSel(9)"><img class="picFighter" src="img/p9.png"></div>
+            <div id="10" onclick="vsSel(10)"><img class="picFighter" src="img/p10.png"></div>
+        </div>
+
+        <div class="seleccionados">
+            <div class="equipos">
+                <div><img id="select11" class="picFighter" src=""></div>
+            </div>
+            <div class="vs"><h1>VS</h1></div>
+            <div class="equipos">
+                <div><img id="select12" class="picFighter" src=""></div>
+
+            </div>
+        </div>
+    </section>
+
+
 
     <script src="js/personajes.js"></script>
     <script src="js/main.js"></script>

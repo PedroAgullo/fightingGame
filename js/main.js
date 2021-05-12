@@ -5,7 +5,7 @@ let equipo2 = [];
 
 
 const cambiaPantalla = (foco) => {
-    let arrPantalla = ["pantalla1", "pantalla2", "pantalla3", "pantalla4", "pantalla5", "pantalla6"];
+    let arrPantalla = ["pantalla1", "pantalla2", "pantalla3", "pantalla4", "pantalla5", "pantalla6", "pantalla7"];
 
     arrPantalla = arrPantalla.filter(val => !foco.includes(val));
     document.getElementById(foco).style.display = "block";
@@ -75,8 +75,10 @@ const comienzaPartida = (player) => {
 
     if (equipo2[0].vida <= 0){
         console.log("Ha ganado la partida el equipo 1 con el luchador: ", equipo1[0].nombre);
+        cambiaPantalla("pantalla6");
     }else if(equipo1[0].vida <= 0){
         console.log("Ha ganado la partida el equipo 2 con el luchador: ", equipo2[0].nombre);
+        cambiaPantalla("pantalla6");
     }
 
     console.log("Jugador 1: ", equipo1[0].nombre, " le queda la vida: ", equipo1[0].vida);
@@ -96,4 +98,33 @@ const cambiarBoton = (player) => {
         document.getElementById('boton1').disabled = '';
         document.getElementById('boton2').disabled = 'true';
     }
+}
+
+const vsSel = (luchador) => {
+    
+    if(equipo2.length < 1){
+
+        if(equipo1.length < 1){
+
+            let seleccionado = "select11";
+            equipo1.push(listaPersonajes[luchador]);
+            document.getElementById(seleccionado).src=equipo1[i].imagen;
+            i++;
+
+        } else {
+            let seleccionado = "select12";            
+            equipo2.push(listaPersonajes[luchador]);
+            document.getElementById(seleccionado).src=equipo2[x].imagen;
+            x++;
+
+            if(equipo2.length == 1){
+                setTimeout(() => {
+                    cambiaPantalla("pantalla4");
+                }, 2000);
+            }
+                        
+        }        
+        document.getElementById(luchador).onclick = "";
+        document.getElementById(luchador).className = "seleccionado";        
+    }        
 }

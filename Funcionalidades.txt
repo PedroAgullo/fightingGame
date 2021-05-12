@@ -4,3 +4,5 @@ ScoreBoard
 
 Barra deslizandose y dar en un punto para ataque extra.
 Barra deslizandose y dar en un punto para defensa extra.
+
+¿Objetos durante la pelea?
