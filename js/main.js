@@ -23,7 +23,9 @@ const escenarioSel = (mapa, escenario) => {
     document.getElementById("pantallaLucha").style.backgroundImage=arrEscenarios[mapa];
     document.getElementById("intro").style.backgroundImage="";
     
+
     cambiaPantalla("pantalla5");
+    colocaLucha();
 }
 
 let i = 0; //recorre el array del equipo1
@@ -175,3 +177,12 @@ const resetea = () => {
 
 
 
+const colocaLucha = () => {
+    
+            let round=0;
+            document.getElementById("select50").src=equipo1[round].imagen;
+            i++;
+
+            document.getElementById("select51").src=equipo2[round].imagen;
+
+}
