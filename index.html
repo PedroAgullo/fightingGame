@@ -13,8 +13,8 @@
 <body>
     <!-- PANTALLA INICIAL CON EL LOGO DEL JUEGO -->
     <section class="secView" id="pantalla1">
-        <div class="intro">
-            <img class="fondoPantalla" src="img/titulo.jpg" alt="Imagen inicial." onclick="cambiaPantalla('pantalla2')">
+        <div id="intro" onclick="cambiaPantalla('pantalla2')">
+            <!-- <img class="fondoPantalla" src="img/titulo.jpg" alt="Imagen inicial." > -->
         </div>
     </section>
 
@@ -114,9 +114,9 @@
 
     <!-- PANTALLA DE LUCHA -->
     <section class="secView" id="pantalla5" style="display:none">
+          <img class="fondoPantalla" id="escenario" src="" alt="Escenario de lucha.">   
 
         <div class="general" id="pantallaLucha">
-            <!-- <img class="fondoPantalla" id="escenario" src="" alt="Escenario de lucha.">    -->
 
 
             <div class="score"></div>
