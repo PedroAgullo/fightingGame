@@ -18,7 +18,7 @@ const cambiaPantalla = (foco) => {
 const escenarioSel = (mapa, escenario) => {
     let arrEscenarios = ["img/escenario0.gif", "img/escenario1.gif", "img/escenario2.gif", "img/escenario3.gif", "img/escenario4.gif" ];
     
-    //document.getElementById("escenario").src=arrEscenarios[mapa];
+    document.getElementById("escenario").src=arrEscenarios[mapa];
     cambiaPantalla("pantalla5");
 }
 
@@ -131,43 +131,47 @@ const vsSel = (luchador) => {
 }
 
 
+const reset = document.getElementById('playAgain');
+reset.addEventListener('click', () => {
+window.location.reload();
+})
+
+const resetea = () => {
 
 
-const reset = () => {
-    cambiaPantalla("pantalla2");
-    equipo1 = [];
-    equipo2 = [];
 
-    //Reiniciamos las imagenes de los luchadores.
-    for(let j=1; j <= 20; j++){
-        let num = j.toString();
-        document.getElementById(num).className = "picFighter";   
-//        document.getElementById(num).style.display = "initial";
+    // cambiaPantalla("pantalla2");
+    // equipo1 = [];
+    // equipo2 = [];
+
+    // //Reiniciamos las imagenes de los luchadores.
+    // for(let j=1; j <= 20; j++){
+    //     let num = j.toString();
+    //     document.getElementById(num).className = "picFighter";   
+    //     //document.getElementById(num).style.display = "initial";
         
        
-        if(j < 11){
-            let num = j.toString();
-            document.getElementById(num).onclick = "luchadorSel(", j,")";
-            console.log(document.getElementById(j).onclick);
-        }else if(j >=11 && j<=20){
+    //     if(j < 11){
+    //         let nom = j.toString();
+    //         document.getElementById(nom).onclick = "vsSel(1)";
+    //         console.log(document.getElementById(j).onclick);
+    //     }else if(j >=11 && j<=20){
 
-        }
+    //     }
 
+    // }
 
-
-
-    }
-
-    //Reiniciamos las posiciones de los equipos.
-    for(let j=0; j<= 4; j++){
+    // //Reiniciamos las posiciones de los equipos.
+    // for(let j=0; j<= 4; j++){
 
 
-    }
+    // }
 
 
-    //Reiniciamos la pantalla seleccionada.
+    // //Reiniciamos la pantalla seleccionada.
 
-    console.log("Equipo 1: ", equipo1);
-    console.log("Equipo 2: ", equipo2);
+    // console.log("Equipo 1: ", equipo1);
+    // console.log("Equipo 2: ", equipo2);
 
 }
+
