@@ -96,20 +96,29 @@
 }
 
 
-
+/*Pantalla de lucha*/
 #pantallaLucha{
     height: 100vh;
     width: 100vw;    
 }
 
-.luchadores{
+.luchadores1{
     width: 20vw;
-    height: 30vh;
+    height: 40vh;
     margin: 1em;
     transition: 0.5s;
     border-radius:0.5em; 
-    filter: grayscale(0%) blur(0px);   
 }
+.luchadores2{
+    width: 20vw;
+    height: 40vh;
+    margin: 1em;
+    transition: 0.5s;
+    border-radius:0.5em; 
+    transform: scaleX(-1);
+
+}
+
 
 .luchadoresDerrotados{
     width: 20vw;
@@ -118,4 +127,50 @@
     transition: 0.5s;
     border-radius:0.5em; 
     filter: grayscale(100%) blur(2px); 
+}
+
+.barraVida{
+
+}
+.general{
+    height: 100vh;
+    width: 100vw; 
+}
+
+.score{
+    height: 5vh;
+    width: 100vw;
+}
+
+.vida{
+    height: 15vh;
+    width: 100vw;   
+}
+
+.divisor{
+    height: 40vh;
+    width: 100vw;
+}
+
+
+
+.personajes{
+    height: 30vh;
+    width: 100vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+}
+
+
+.boton{
+    height: 3em;
+    width: 5em;
+    background-color: chartreuse;}
+
+.boton_desabilitado{
+    height: 3em;
+    width: 5em;
+    color: chartreuse;
 }

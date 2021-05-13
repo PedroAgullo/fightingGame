@@ -14,9 +14,9 @@ class Luchador{
 }
 
 //Instancio luchadores
-let p1 = new Luchador("Shrek",30,10,25,"img/p1.png");
-let p2 = new Luchador("Burro",35,12,33, "img/p2.png");
-let p3 = new Luchador("Gato",25,20, 24,"img/p3.png");
+let p1 = new Luchador("Shrek",30,10,25,"img/jack.gif");
+let p2 = new Luchador("Burro",35,12,33, "img/robert.gif");
+let p3 = new Luchador("Gato",25,20, 24,"img/takuma.gif");
 let p4 = new Luchador("Fiona",40,8,33,"img/p4.png");
 let p5 = new Luchador("Frodo",30,10,18,"img/p5.png");
 let p6 = new Luchador("Slayer",35,12,34, "img/p6.png");
