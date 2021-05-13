@@ -8,19 +8,16 @@
 .score{
     height: 5vh;
     width: 100vw;
-    background-color: red;
 }
 
 .vida{
     height: 10vh;
     width: 100vw;   
-    background-color: burlywood; 
 }
 
 .divisor{
     height: 20vh;
     width: 100vw;
-    background-color: blue;
 }
 
 .boton{

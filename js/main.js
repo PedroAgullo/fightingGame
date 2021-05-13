@@ -18,7 +18,8 @@ const cambiaPantalla = (foco) => {
 const escenarioSel = (mapa, escenario) => {
     let arrEscenarios = ["img/escenario0.gif", "img/escenario1.gif", "img/escenario2.gif", "img/escenario3.gif", "img/escenario4.gif" ];
     
-    document.getElementById("escenario").src=arrEscenarios[mapa];
+    //document.getElementById("escenario").src=arrEscenarios[mapa];
+    //document.getElementById("pantallaLucha").style.backgroundImage=arrEscenarios[mapa];
     cambiaPantalla("pantalla5");
 }
 
