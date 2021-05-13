@@ -69,9 +69,12 @@ const comienzaPartida = (player) => {
     if (player == 1){
         console.log("Ataca el jugador 1.");
         equipo1[0].atacar(equipo2[0]);
+        actualizaVida(player);
     }else{
         console.log("Ataca el jugador 2.")
         equipo2[0].atacar(equipo1[0]);
+        actualizaVida(player);
+
     }
 
 
@@ -87,6 +90,28 @@ const comienzaPartida = (player) => {
     console.log("Jugador 1: ", equipo2[0].nombre, " le queda la vida: ", equipo2[0].vida);
     cambiarBoton(player);
 }
+
+
+/*Función para que baje la barra de vida con cada golpe*/
+const actualizaVida = (selVida) => {
+    let vidaBarra1 = equipo1[0].vida;
+    let vidaBarra2 = equipo2[0].vida;
+
+    if(selVida = 2){
+        vidaBarra1 = (vidaBarra1 * 40)/100;
+        console.log(document.getElementById("vida1").style.width);
+        document.getElementById("vida1").style.width = vidaBarra1+"vw";
+        console.log(document.getElementById("vida1").style.width);
+    }else if(selVida = 1){
+        vidaBarra2 = (vidaBarra2 * 40)/100;
+        console.log(document.getElementById("vida2").style.width);
+        document.getElementById("vida2").style.width = vidaBarra2+"vw";
+        console.log(document.getElementById("vida2").style.width);
+    }
+
+}
+
+
 
 const cambiarBoton = (player) => {
     if(player == 1){

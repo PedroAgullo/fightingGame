@@ -157,12 +157,12 @@
     border: black solid 0.5em;
     display:flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     border-radius: 1em;  
 } 
 
-.vida1{
+#vida1{
     height: 10vh;
     width: 40vw;
     background-color: yellow;
@@ -176,18 +176,17 @@
     border: black solid 0.5em;
     display:flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center; 
+    justify-content: right;
+    align-items:center; 
     border-radius: 1em;  
  
 } 
 
-.vida2{
+#vida2{
     height: 10vh;
     width: 40vw;
     background-color: yellow;
-    border-radius: 0.5em;  
-
+    border-radius: 0.5em; 
 }
 
 .centroBarraVida{
