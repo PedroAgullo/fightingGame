@@ -11,14 +11,31 @@
 }
 
 .vida{
-    height: 10vh;
+    height: 15vh;
     width: 100vw;   
 }
 
 .divisor{
-    height: 20vh;
+    height: 40vh;
     width: 100vw;
 }
+
+
+
+
+.personajes{
+    height: 30vh;
+    width: 100vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+}
+
+
+
+
+
 
 .boton{
     height: 3em;

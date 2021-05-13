@@ -2,8 +2,7 @@
 let equipo1 = [];
 let equipo2 = [];
 
-
-
+// Función de cambio de pantallas
 const cambiaPantalla = (foco) => {
     let arrPantalla = ["pantalla1", "pantalla2", "pantalla3", "pantalla4", "pantalla5", "pantalla6", "pantalla7"];
 
@@ -15,14 +14,15 @@ const cambiaPantalla = (foco) => {
     }
 }
 
+//Función de cambio de escenario.
 const escenarioSel = (mapa, escenario) => {
     let arrEscenarios = ["img/escenario0.gif", "img/escenario1.gif", "img/escenario2.gif", "img/escenario3.gif", "img/escenario4.gif" ];
     
     //document.getElementById("escenario").src=arrEscenarios[mapa];
     //document.getElementById("pantallaLucha").style.backgroundImage=arrEscenarios[mapa];
+    
     cambiaPantalla("pantalla5");
 }
-
 
 let i = 0; //recorre el array del equipo1
 let x = 0; //recorre el array del equipo2
@@ -59,10 +59,6 @@ let j1 = [];
 let j2 = [];
 let round = 1;
 
-
-
-
-
 const comienzaPartida = (player) => {          
     console.log(equipo1[0]);
     console.log(equipo2[0]);
@@ -87,7 +83,6 @@ const comienzaPartida = (player) => {
     console.log("Jugador 1: ", equipo2[0].nombre, " le queda la vida: ", equipo2[0].vida);
     cambiarBoton(player);
 }
-
 
 const cambiarBoton = (player) => {
     if(player == 1){
@@ -131,7 +126,7 @@ const vsSel = (luchador) => {
     }        
 }
 
-
+/*Resetea el juego*/
 const reset = document.getElementById('playAgain');
 reset.addEventListener('click', () => {
 window.location.reload();
@@ -175,4 +170,6 @@ const resetea = () => {
     // console.log("Equipo 2: ", equipo2);
 
 }
+
+
 

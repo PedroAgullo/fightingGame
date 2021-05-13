@@ -8,7 +8,7 @@
     width: 100vw;
 }
 
-
+/*Estilos del menu principal*/
 .menuPrincipal{
     height: 100vh;
     width: 100vw;
@@ -26,6 +26,8 @@
     align-items: center;
 }
 
+
+/*Estilos del menu de seleccion de personajes*/
 .personaje{
     display:flex;
     flex-direction: row;
@@ -42,7 +44,7 @@
     filter: grayscale(0%) blur(0px);
    
 }
-
+/*Estilos de la pantalla de seleccion de mapa*/
 .picStage{
     width: 14em;
     height: 10em;
@@ -71,7 +73,6 @@
 
 #pantalla3{
     background-color: dodgerblue;
-
 }
 
 
@@ -117,8 +118,14 @@
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+}
 
 
-
-
+.luchadores{
+    width: 20em;
+    height: 20em;
+    margin: 1em;
+    transition: 0.5s;
+    border-radius:0.5em; 
+    filter: grayscale(0%) blur(0px);   
 }
