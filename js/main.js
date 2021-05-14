@@ -83,12 +83,14 @@ const comienzaPartida = (player) => {
         setTimeout(() => {
             cambiaPantalla("pantalla6");
         }, 1500);
+        colocaResultado();
         cambiaPantalla("pantalla6");
     }else if(equipo1[0].vida <= 0){
         console.log("Ha ganado la partida el equipo 2 con el luchador: ", equipo2[0].nombre);
         setTimeout(() => {
             cambiaPantalla("pantalla6");
         }, 1500);
+        colocaResultado();
     }
 
     cambiarBoton(player);
@@ -154,53 +156,26 @@ reset.addEventListener('click', () => {
 window.location.reload();
 })
 
-const resetea = () => {
 
+const colocaLucha = () => {
+    
+            let round=0;
+            document.getElementById("select50").src=equipo1[round].animacion;
+            i++;
 
-
-    // cambiaPantalla("pantalla2");
-    // equipo1 = [];
-    // equipo2 = [];
-
-    // //Reiniciamos las imagenes de los luchadores.
-    // for(let j=1; j <= 20; j++){
-    //     let num = j.toString();
-    //     document.getElementById(num).className = "picFighter";   
-    //     //document.getElementById(num).style.display = "initial";
-        
-       
-    //     if(j < 11){
-    //         let nom = j.toString();
-    //         document.getElementById(nom).onclick = "vsSel(1)";
-    //         console.log(document.getElementById(j).onclick);
-    //     }else if(j >=11 && j<=20){
-
-    //     }
-
-    // }
-
-    // //Reiniciamos las posiciones de los equipos.
-    // for(let j=0; j<= 4; j++){
-
-
-    // }
-
-
-    // //Reiniciamos la pantalla seleccionada.
-
-    // console.log("Equipo 1: ", equipo1);
-    // console.log("Equipo 2: ", equipo2);
+            document.getElementById("select51").src=equipo2[round].animacion;
 
 }
 
 
 
-const colocaLucha = () => {
+const colocaResultado = () => {
     
-            let round=0;
-            document.getElementById("select50").src=equipo1[round].imagen;
-            i++;
+    let round=0;
+    document.getElementById("select100").src=equipo1[round].imagen;
+    document.getElementById("select101").src=equipo2[round].imagen;
 
-            document.getElementById("select51").src=equipo2[round].imagen;
+    i++;
+    document.getElementById("textoResultado").innerHTML("<h1>El ganador es...</h1>");
 
 }

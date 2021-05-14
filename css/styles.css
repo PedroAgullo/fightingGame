@@ -116,14 +116,14 @@
     width: 20vw;
     height: 40vh;
     margin: 1em;
-    transition: 0.5s;
+    transition: 0.8s;
     border-radius:0.5em; 
 }
 .luchadores2{
     width: 20vw;
     height: 40vh;
     margin: 1em;
-    transition: 0.5s;
+    transition: 0.8s;
     border-radius:0.5em; 
     transform: scaleX(-1);
 
@@ -231,5 +231,26 @@
     height: 3em;
     width: 5em;
     color: chartreuse;
+}
+
+/*PANTALLA DE RESULTADO DE LA PARTIDA*/
+.resultado{
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    background-color: black;
+    color: orange;
+}
+
+.resultadoLuchadores{
+    height: 80vh;
+    width: 100vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
 }
 
