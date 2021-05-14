@@ -166,7 +166,8 @@
     height: 10vh;
     width: 40vw;
     background-color: yellow;
-    border-radius: 0.5em;  
+    border-radius: 0.5em;
+    transition: width 0.5s;
 
 }
 
@@ -175,11 +176,10 @@
     width: 40vw;   
     border: black solid 0.5em;
     display:flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: right;
-    align-items:center; 
+    align-items: center; 
     border-radius: 1em;  
- 
 } 
 
 #vida2{
@@ -187,6 +187,7 @@
     width: 40vw;
     background-color: yellow;
     border-radius: 0.5em; 
+    transition: width 0.5s;
 }
 
 .centroBarraVida{
@@ -201,7 +202,6 @@
 }
 
 
-
 .personajes{
     height: 30vh;
     width: 100vw;
@@ -211,11 +211,11 @@
     align-items: center;  
 }
 
-
 .boton{
     height: 3em;
     width: 5em;
-    background-color: chartreuse;}
+    background-color: chartreuse;
+}
 
 .boton_desabilitado{
     height: 3em;

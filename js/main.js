@@ -97,18 +97,10 @@ const actualizaVida = (selVida) => {
     let vidaBarra1 = equipo1[0].vida;
     let vidaBarra2 = equipo2[0].vida;
 
-    if(selVida = 2){
-        vidaBarra1 = (vidaBarra1 * 40)/100;
-        console.log(document.getElementById("vida1").style.width);
-        document.getElementById("vida1").style.width = vidaBarra1+"vw";
-        console.log(document.getElementById("vida1").style.width);
-    }else if(selVida = 1){
-        vidaBarra2 = (vidaBarra2 * 40)/100;
-        console.log(document.getElementById("vida2").style.width);
-        document.getElementById("vida2").style.width = vidaBarra2+"vw";
-        console.log(document.getElementById("vida2").style.width);
-    }
-
+    vidaBarra1 = (vidaBarra1 * 40)/100;
+    document.getElementById("vida1").style.width = vidaBarra1+"vw";
+    vidaBarra2 = (vidaBarra2 * 40)/100;
+    document.getElementById("vida2").style.width = vidaBarra2+"vw";
 }
 
 
