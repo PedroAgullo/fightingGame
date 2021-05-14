@@ -170,12 +170,18 @@ const colocaLucha = () => {
 
 
 const colocaResultado = () => {
-    
+    let mensajeGanador = "No hace lo que debe";
     let round=0;
     document.getElementById("select100").src=equipo1[round].imagen;
     document.getElementById("select101").src=equipo2[round].imagen;
+    if (equipo1[0].vida > equipo2[0].vida){
+        mensajeGanador = equipo1[0].nombre + " ha ganado el combate a " + equipo2[0].nombre;
 
+    }else {
+        mensajeGanador = equipo2[0].nombre + " ha ganado el combate a " + equipo1[0].nombre;
+    }
+
+    
     i++;
-    document.getElementById("textoResultado").innerHTML("<h1>El ganador es...</h1>");
-
+    document.getElementById("textoResultado").innerHTML = (mensajeGanador);
 }
