@@ -70,24 +70,27 @@ const comienzaPartida = (player) => {
         console.log("Ataca el jugador 1.");
         equipo1[0].atacar(equipo2[0]);
         actualizaVida(player);
+
     }else{
         console.log("Ataca el jugador 2.")
         equipo2[0].atacar(equipo1[0]);
         actualizaVida(player);
-
     }
 
 
     if (equipo2[0].vida <= 0){
         console.log("Ha ganado la partida el equipo 1 con el luchador: ", equipo1[0].nombre);
+        setTimeout(() => {
+            cambiaPantalla("pantalla6");
+        }, 1500);
         cambiaPantalla("pantalla6");
     }else if(equipo1[0].vida <= 0){
         console.log("Ha ganado la partida el equipo 2 con el luchador: ", equipo2[0].nombre);
-        cambiaPantalla("pantalla6");
+        setTimeout(() => {
+            cambiaPantalla("pantalla6");
+        }, 1500);
     }
 
-    console.log("Jugador 1: ", equipo1[0].nombre, " le queda la vida: ", equipo1[0].vida);
-    console.log("Jugador 1: ", equipo2[0].nombre, " le queda la vida: ", equipo2[0].vida);
     cambiarBoton(player);
 }
 
@@ -103,21 +106,19 @@ const actualizaVida = (selVida) => {
     document.getElementById("vida2").style.width = vidaBarra2+"vw";
 }
 
-
-
+/* Cambia el turno del personaje. Cada vez ataca uno y bloquea el otro botón. */
 const cambiarBoton = (player) => {
     if(player == 1){
-        console.log("Paso por arriba");
         document.getElementById('boton1').disabled = 'true';
         document.getElementById('boton2').disabled = '';
 
     }else if (player == 2){
-        console.log("Paso por abajo");
         document.getElementById('boton1').disabled = '';
         document.getElementById('boton2').disabled = 'true';
     }
 }
 
+/* Selección de personaje del modo VS */
 const vsSel = (luchador) => {
     
     if(equipo2.length < 1){

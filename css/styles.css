@@ -42,7 +42,7 @@
 
 .picFighter{
     width: 8em;
-    height: 8em;
+    height: 12em;
     margin: 1em;
     transition: 0.5s;
     border-radius:0.5em; 
@@ -152,7 +152,7 @@
 } 
 
 .barraVida1{
-    height: 10vh;
+    height: 7vh;
     width: 40vw;   
     border: black solid 0.5em;
     display:flex;
@@ -163,7 +163,7 @@
 } 
 
 #vida1{
-    height: 10vh;
+    height: 7vh;
     width: 40vw;
     background-color: yellow;
     border-radius: 0.5em;
@@ -172,7 +172,7 @@
 }
 
 .barraVida2{
-    height: 10vh;
+    height: 7vh;
     width: 40vw;   
     border: black solid 0.5em;
     display:flex;
@@ -183,7 +183,7 @@
 } 
 
 #vida2{
-    height: 10vh;
+    height: 7vh;
     width: 40vw;
     background-color: yellow;
     border-radius: 0.5em; 
