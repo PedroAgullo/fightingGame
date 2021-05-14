@@ -14,16 +14,16 @@ class Luchador{
 }
 
 //Instancio luchadores
-let p1 = new Luchador("Ryo",30,10,25,"img/p1Gif.gif");
-let p2 = new Luchador("Robert",35,12,33, "img/p2Gif.gif");
-let p3 = new Luchador("Mr.X",25,20, 24,"img/p3Gif.gif");
-let p4 = new Luchador("King",40,8,33,"img/p4Gif.png");
-let p5 = new Luchador("Rody",30,10,18,"img/p5.png");
-let p6 = new Luchador("Jin",35,12,34, "img/p6.png");
-let p7 = new Luchador("Mr.Karate",25,20,28,"img/p7.png");
-let p8 = new Luchador("Kasumi",40,8,27,"img/p8.png");
-let p9 = new Luchador("Yuri",30,10,26,"img/p9.png");
-let p10 = new Luchador("Jack",35,12,32,"img/p10.png");
+let p1 = new Luchador("Ryo",30,10,25,"img/p1gif.gif");
+let p2 = new Luchador("Robert",35,12,33, "img/p2gif.gif");
+let p3 = new Luchador("Mr.X",25,20, 24,"img/p3gif.gif");
+let p4 = new Luchador("King",40,8,33,"img/p4gif.gif");
+let p5 = new Luchador("Rody",30,10,18,"img/p5gif.gif");
+let p6 = new Luchador("Jin",35,12,34, "img/p6gif.gif");
+let p7 = new Luchador("Mr.Karate",25,20,28,"img/p7gif.gif");
+let p8 = new Luchador("Kasumi",40,8,27,"img/p8gif.gif");
+let p9 = new Luchador("Yuri",30,10,26,"img/p9gif.gif");
+let p10 = new Luchador("Jack",35,12,32,"img/p10gif.gif");
 
 let listaPersonajes = {
     "1" : p1,
