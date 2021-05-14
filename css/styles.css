@@ -49,6 +49,16 @@
     filter: grayscale(0%) blur(0px);   
 }
 
+.picdelReves{
+    width: 8em;
+    height: 12em;
+    margin: 1em;
+    transition: 0.5s;
+    border-radius:0.5em; 
+    filter: grayscale(0%) blur(0px); 
+    transform: scaleX(-1);
+  
+}
 /*Estilos de la pantalla de seleccion de mapa*/
 .picStage{
     width: 14em;
