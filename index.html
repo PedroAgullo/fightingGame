@@ -6,15 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/lucha.css">
-
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+
     <!-- PANTALLA INICIAL CON EL LOGO DEL JUEGO -->
     <section class="secView" id="pantalla1">
+        <audio src="sound/SNK_Theme.mp3" autoplay></audio>
+
         <div id="intro" onclick="cambiaPantalla('pantalla2')">
-            <!-- <img class="fondoPantalla" src="img/titulo.jpg" alt="Imagen inicial." > -->
+
         </div>
     </section>
 
@@ -100,7 +102,7 @@
         </div>
     </section>
 
-    <!-- PANTALLA ELECCION DE MAPA -->
+    <!-- PANTALLA ELECCION DE MAPA VS -->
     <section class="secView" id="pantalla4" style="display:none">
         <h1>SELECCION DE ESCENARIO</h1>
         <div class="personaje">
@@ -112,7 +114,7 @@
         </div>
     </section>
 
-    <!-- PANTALLA DE LUCHA -->
+    <!-- PANTALLA DE LUCHA vs -->
     <section class="secView" id="pantalla5" style="display:none">
           <img class="fondoPantalla" id="escenario" src="" alt="Escenario de lucha.">   
 
@@ -141,10 +143,10 @@
                 </div>
                 <div class="accionScreen">
                     <div class="accionT1">
-                        <button class="boton" id="boton1" onclick="comienzaPartida(1)" >T1 - Attack!</button>
+                        <button class="boton" id="boton1" onclick="comienzaPartidaVS(1)" >T1 - Attack!</button>
                     </div>
                     <div class="accionT2">
-                        <button class="boton" id="boton2" onclick="comienzaPartida(2)" >T2 - Attack!</button>
+                        <button class="boton" id="boton2" onclick="comienzaPartidaVS(2)" >T2 - Attack!</button>
                     </div>
                 </div>
                 <div class="team2">
@@ -155,7 +157,7 @@
         </div>
     </section>
 
-    <!-- PANTALLA DE RESULTADO -->
+    <!-- PANTALLA DE RESULTADO  1 vs 1-->
     <section class="secView" id="pantalla6" style="display:none">
         <div class="resultado">
             <h1 id="textoResultado"></h1>
@@ -177,6 +179,97 @@
         </div>
     </section> 
 
+        <!-- PANTALLA ELECCION DE MAPA TEAM -->
+        <section class="secView" id="pantalla10" style="display:none">
+            <h1>SELECCION DE ESCENARIO TEAM</h1>
+            <div class="personaje">
+                <div id="000" onclick="escenarioSelTeam(0, 'escenario')"><img class="picStage" src="img/escenario0.gif"></div>
+                <div id="001" onclick="escenarioSelTeam(1, 'escenario')"><img class="picStage" src="img/escenario1.gif"></div>
+                <div id="002" onclick="escenarioSelTeam(2, 'escenario')"><img class="picStage" src="img/escenario2.gif"></div>
+                <div id="003" onclick="escenarioSelTeam(3, 'escenario')"><img class="picStage" src="img/escenario3.gif"></div>
+                <div id="004" onclick="escenarioSelTeam(4, 'escenario')"><img class="picStage" src="img/escenario4.gif"></div>
+            </div>
+        </section>
+        <!-- PANTALLA DE LUCHA TEAM BATTLE-->
+        <section class="secView" id="pantalla9" style="display:none">
+            <img class="fondoPantalla" id="escenarioTeam" src="" alt="Escenario de lucha.">   
+  
+          <div class="general" id="pantallaLuchaTeam">
+  
+  
+              <div class="score"></div>
+              <div class="vida">
+  
+                  <div class="barraVida3">
+                      <div id="vida3"></div>
+                  </div>
+  
+                  <div class="centroBarraVida"></div>
+  
+                  <div class="barraVida4">
+                      <div id="vida4"></div>
+                  </div>
+              </div>
+              
+              <div class="divisor"></div>
+              <div class="personajes">
+                  <div class="team1" >
+                      <div><img id="select55" class="luchadores1" src="/img/white.png"></div>
+  
+                  </div>
+                  <div class="accionScreen">
+                      <div class="accionT1">
+                          <button class="boton" id="boton3" onclick="comienzaPartidaTeam(1)" >T1 - Attack!</button>
+                      </div>
+                      <div class="accionT2">
+                          <button class="boton" id="boton4" onclick="comienzaPartidaTeam(2)" >T2 - Attack!</button>
+                      </div>
+                  </div>
+                  <div class="team2">
+                      <div><img id="select56" class="luchadores2" src="/img/white.png"></div>
+                  </div>
+              </div>
+              <div class="abajo"></div>
+          </div>
+      </section>
+
+    <!-- PANTALLA DE RESULTADO  TEAM BATTLE -->
+    <section class="secView" id="pantalla8" style="display:none">
+        <div class="resultadoTeam">
+            <h1 id="textoResultadoTeam"></h1>
+            <div class="resultadoTexto">
+                
+            </div>
+
+            <div class="resultadoLuchadoresTeam">
+                <div><img id="select150" class="luchadoresTeam1" src="/img/white.png"></div>
+
+                <div><img id="select151" class="luchadoresTeam2" src="/img/white.png"></div>
+
+
+            </div>           
+            
+            <div class="resultadoLuchadoresTeam">
+                <div><img id="select152" class="luchadoresTeam1" src="/img/white.png"></div>
+
+                <div><img id="select153" class="luchadoresTeam2" src="/img/white.png"></div>
+
+
+            </div>           
+            <div class="resultadoLuchadoresTeam">
+                <div><img id="select154" class="luchadoresTeam1" src="/img/white.png"></div>
+
+                <div><img id="select155" class="luchadoresTeam2" src="/img/white.png"></div>
+
+
+            </div>           
+
+
+            <h1 id="playAgain2">PULSA PARA EMPEZAR OTRA</h1>
+        
+        
+        </div>
+    </section> 
 
     <section class="secView" style="display:none">
         <div class="Play Again">

@@ -16,7 +16,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: dodgerblue;
+    background-color: black;
+    color: orange;
+
 }
 
 #intro{
@@ -26,7 +28,8 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
-    background-image: url(/img/art-of-fighting-10.jpg);
+    /* background-image: url(/img/art-of-fighting-10.jpg); */
+    background-image: url(/img/snkScreen.png);
     background-size: cover;
     z-index: -2;
 }
@@ -126,7 +129,6 @@
     transition: 0.8s;
     border-radius:0.5em; 
     transform: scaleX(-1);
-
 }
 
 
@@ -233,7 +235,7 @@
     color: chartreuse;
 }
 
-/*PANTALLA DE RESULTADO DE LA PARTIDA*/
+/*PANTALLA DE RESULTADO DE LA PARTIDA 1 vs 1*/
 .resultado{
     height: 100vh;
     width: 100vw;
@@ -254,3 +256,90 @@
     align-items: center; 
 }
 
+.resultadoTeam{
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+    background-color: black;
+    color: orange;
+}
+
+.resultadoLuchadoresTeam{
+    height: 80vh;
+    width: 100vw;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; 
+}
+
+.luchadoresTeam1{
+    width: 15vw;
+    height: 30vh;
+    margin: 1em;
+    transition: 0.8s;
+    border-radius:0.5em; 
+}
+.luchadoresTeam2{
+    width: 15vw;
+    height: 30vh;
+    margin: 1em;
+    transition: 0.8s;
+    border-radius:0.5em; 
+    transform: scaleX(-1);
+}
+
+#escenarioTeam{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;   
+    z-index: -1;    
+}
+
+#pantallaLuchaTeam{
+    height: 100vh;
+    width: 100vw;    
+}
+
+
+.barraVida3{
+    height: 7vh;
+    width: 40vw;   
+    border: black solid 0.5em;
+    display:flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    border-radius: 1em;  
+} 
+
+#vida3{
+    height: 7vh;
+    width: 40vw;
+    background-color: yellow;
+    border-radius: 0.5em;
+    transition: width 0.5s;
+
+}
+
+.barraVida4{
+    height: 7vh;
+    width: 40vw;   
+    border: black solid 0.5em;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    align-items: center; 
+    border-radius: 1em;  
+} 
+
+#vida4{
+    height: 7vh;
+    width: 40vw;
+    background-color: yellow;
+    border-radius: 0.5em; 
+    transition: width 0.5s;
+}

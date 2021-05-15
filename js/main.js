@@ -1,10 +1,13 @@
-
+let round = 0;
+let W1 = 0;
+let W2 = 0;
 let equipo1 = [];
 let equipo2 = [];
 
+
 // Función de cambio de pantallas
 const cambiaPantalla = (foco) => {
-    let arrPantalla = ["pantalla1", "pantalla2", "pantalla3", "pantalla4", "pantalla5", "pantalla6", "pantalla7"];
+    let arrPantalla = ["pantalla1", "pantalla2", "pantalla3", "pantalla4", "pantalla5", "pantalla6", "pantalla7", "pantalla8", "pantalla9", "pantalla10"];
 
     arrPantalla = arrPantalla.filter(val => !foco.includes(val));
     document.getElementById(foco).style.display = "block";
@@ -48,7 +51,7 @@ const luchadorSel = (luchador) => {
 
             if(equipo2.length == 3){
                 setTimeout(() => {
-                    cambiaPantalla("pantalla4");
+                    cambiaPantalla("pantalla10");
                 }, 2000);
             }
                         
@@ -59,18 +62,12 @@ const luchadorSel = (luchador) => {
     }        
 }
 
-let j1 = [];
-let j2 = [];
-let round = 1;
-
-const comienzaPartida = (player) => {          
-    console.log(equipo1[0]);
-    console.log(equipo2[0]);
+const comienzaPartidaVS = (player) => {          
+    
     if (player == 1){
         console.log("Ataca el jugador 1.");
         equipo1[0].atacar(equipo2[0]);
         actualizaVida(player);
-
     }else{
         console.log("Ataca el jugador 2.")
         equipo2[0].atacar(equipo1[0]);
@@ -156,26 +153,24 @@ reset.addEventListener('click', () => {
 window.location.reload();
 })
 
+const resetTeam = document.getElementById('playAgain2');
+resetTeam.addEventListener('click', () => {
+window.location.reload();
+})
 
 const colocaLucha = () => {
-    
-            let round=0;
             document.getElementById("select50").src=equipo1[round].animacion;
-            i++;
-
             document.getElementById("select51").src=equipo2[round].animacion;
-
 }
-
-
 
 const colocaResultado = () => {
     let mensajeGanador = "No hace lo que debe";
     let round=0;
-    document.getElementById("select100").src=equipo1[round].imagen;
-    document.getElementById("select101").src=equipo2[round].imagen;
+    document.getElementById("select100").src=equipo1[0].imagen;
+    document.getElementById("select101").src=equipo2[0].imagen;
     if (equipo1[0].vida > equipo2[0].vida){
         mensajeGanador = equipo1[0].nombre + " ha ganado el combate a " + equipo2[0].nombre;
+        document.getElementById("select101").style.class = ("luchadoresDerrotados");
 
     }else {
         mensajeGanador = equipo2[0].nombre + " ha ganado el combate a " + equipo1[0].nombre;
@@ -184,4 +179,110 @@ const colocaResultado = () => {
     
     i++;
     document.getElementById("textoResultado").innerHTML = (mensajeGanador);
+}
+
+const colocaResultadoTeam = (ganador, W1, W2) => {    
+    let mensajeGanador = "No hace lo que debe";
+    
+    document.getElementById("select150").src=equipo1[0].imagen;
+    document.getElementById("select151").src=equipo2[0].imagen;
+    document.getElementById("select152").src=equipo1[1].imagen;
+    document.getElementById("select153").src=equipo2[1].imagen;
+    document.getElementById("select154").src=equipo1[2].imagen;
+    document.getElementById("select155").src=equipo2[2].imagen;
+    
+    if (ganador == "Equipo1"){
+        document.getElementById("textoResultadoTeam").innerHTML = (ganador + " ha ganado la batalla por " + W1 + "combates a " + W2);
+
+    }else if (ganador == "Equipo2") {
+        document.getElementById("textoResultadoTeam").innerHTML = (ganador + " ha ganado la batalla por " + W2 + "combates a " + W1);    
+    }
+
+    
+    document.getElementById("textoResultado").innerHTML = (mensajeGanador);
+}
+
+
+const comienzaPartidaTeam = (player) => {          
+    console.log("Entra en comienzaPartidaTeam");
+    
+    if (player == 1){
+        console.log("Ataca el jugador 1.");
+        equipo1[round].atacar(equipo2[round]);
+        actualizaVidaTeam(player);
+    }else{
+        console.log("Ataca el jugador 2.")
+        equipo2[0].atacar(equipo1[round]);
+        actualizaVidaTeam(player);
+    }
+
+
+    if (equipo2[0].vida <= 0){
+        console.log("Ha ganado la partida el equipo 1 con el luchador: ", equipo1[round].nombre);
+        setTimeout(() => {
+            cambiaPantalla("pantalla8");
+        }, 1500);
+        colocaResultadoTeam();
+    }else if(equipo1[0].vida <= 0){
+        console.log("Ha ganado la partida el equipo 2 con el luchador: ", equipo2[round].nombre);
+        setTimeout(() => {
+            cambiaPantalla("pantalla8");
+        }, 1500);
+        colocaResultadoTeam();
+    }
+
+    cambiarBotonTeam(player);
+}
+
+
+const escenarioSelTeam = (mapa, escenario) => {
+    let arrEscenarios = ["img/escenario0.gif", "img/escenario1.gif", "img/escenario2.gif", "img/escenario3.gif", "img/escenario4.gif" ];
+    document.getElementById("intro").style.backgroundImage="";
+
+    document.getElementById("escenarioTeam").src=arrEscenarios[mapa];
+    document.getElementById("pantallaLuchaTeam").style.backgroundImage=arrEscenarios[mapa];
+    
+
+    cambiaPantalla("pantalla9");
+    colocaLuchaTeam();
+}
+
+const colocaLuchaTeam = () => {
+    if (W1 + W2 == 0){
+        document.getElementById("select55").src=equipo1[round].animacion;
+        document.getElementById("select56").src=equipo2[round].animacion;
+
+
+    }else if (W1 + W2 == 1){
+        document.getElementById("select55").src=equipo1[round].animacion;
+        document.getElementById("select56").src=equipo2[round].animacion;
+    }else if (W1 + W2 == 2){
+        document.getElementById("select55").src=equipo1[round].animacion;
+        document.getElementById("select56").src=equipo2[round].animacion;
+    }
+    
+}
+
+
+const cambiarBotonTeam = (player) => {
+    console.log("Entra a cambiar botonTeam")
+    if(player == 1){
+        document.getElementById('boton3').disabled = 'true';
+        document.getElementById('boton4').disabled = '';
+
+    }else if (player == 2){
+        document.getElementById('boton3').disabled = '';
+        document.getElementById('boton4').disabled = 'true';
+    }
+}
+
+
+const actualizaVidaTeam = (selVida) => {
+    let vidaBarra1 = equipo1[round].vida;
+    let vidaBarra2 = equipo2[round].vida;
+
+    vidaBarra1 = (vidaBarra1 * 40)/100;
+    document.getElementById("vida3").style.width = vidaBarra1+"vw";
+    vidaBarra2 = (vidaBarra2 * 40)/100;
+    document.getElementById("vida4").style.width = vidaBarra2+"vw";
 }
