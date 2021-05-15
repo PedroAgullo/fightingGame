@@ -16,8 +16,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
     color: orange;
+    background-image: url(/img/menuScreen.png);
+    background-size: cover;
+    z-index: -2;
 
 }
 
@@ -86,11 +88,11 @@
 }
 
 #pantalla7{
-    background-color: dodgerblue;
+    background-color: black;
 }
 
 #pantalla3{
-    background-color: dodgerblue;
+    background-color: black;
 }
 
 
@@ -164,9 +166,9 @@
 } 
 
 .barraVida1{
-    height: 7vh;
+    height: 4vh;
     width: 40vw;   
-    border: black solid 0.5em;
+    border: white solid 0.3em;
     display:flex;
     flex-direction: row;
     justify-content: left;
@@ -175,7 +177,7 @@
 } 
 
 #vida1{
-    height: 7vh;
+    height: 4vh;
     width: 40vw;
     background-color: yellow;
     border-radius: 0.5em;
@@ -184,9 +186,9 @@
 }
 
 .barraVida2{
-    height: 7vh;
+    height: 4vh;
     width: 40vw;   
-    border: black solid 0.5em;
+    border: white solid 0.3em;
     display:flex;
     flex-direction: row-reverse;
     justify-content: right;
@@ -195,7 +197,7 @@
 } 
 
 #vida2{
-    height: 7vh;
+    height: 4vh;
     width: 40vw;
     background-color: yellow;
     border-radius: 0.5em; 
@@ -306,9 +308,9 @@
 
 
 .barraVida3{
-    height: 7vh;
+    height: 4vh;
     width: 40vw;   
-    border: black solid 0.5em;
+    border: white solid 0.3em;
     display:flex;
     flex-direction: row;
     justify-content: left;
@@ -317,18 +319,18 @@
 } 
 
 #vida3{
-    height: 7vh;
+    height: 4vh;
     width: 40vw;
     background-color: yellow;
-    border-radius: 0.5em;
+    border-radius: 0.8em;
     transition: width 0.5s;
 
 }
 
 .barraVida4{
-    height: 7vh;
+    height: 4vh;
     width: 40vw;   
-    border: black solid 0.5em;
+    border: white solid 0.3em;
     display:flex;
     flex-direction: row-reverse;
     justify-content: right;
@@ -337,9 +339,9 @@
 } 
 
 #vida4{
-    height: 7vh;
+    height: 4vh;
     width: 40vw;
     background-color: yellow;
-    border-radius: 0.5em; 
+    border-radius: 0.em; 
     transition: width 0.5s;
 }
