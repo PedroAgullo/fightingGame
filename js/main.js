@@ -157,13 +157,14 @@ window.location.reload();
 })
 
 const colocaLucha = () => {
+    if (round < 3){
             document.getElementById("select50").src=equipo1[round].animacion;
             document.getElementById("select51").src=equipo2[round].animacion;
+    }
 }
 
 const colocaResultado = () => {
     let mensajeGanador = "No hace lo que debe";
-    let round=0;
     document.getElementById("select100").src=equipo1[0].imagen;
     document.getElementById("select101").src=equipo2[0].imagen;
     if (equipo1[0].vida > equipo2[0].vida){
@@ -179,9 +180,11 @@ const colocaResultado = () => {
     document.getElementById("textoResultado").innerHTML = (mensajeGanador);
 }
 
-const colocaResultadoTeam = (ganador, W1, W2) => {    
-    let mensajeGanador = "No hace lo que debe";
-    
+const colocaResultadoTeam = () => {    
+    let mensaje1 = "No hace lo que debe."
+    let mensaje2 = "No hace lo que debe."
+    let mensaje3 = "No hace lo que debe."
+    let mensajeGanador = "No hace lo que debe."
     document.getElementById("select150").src=equipo1[0].imagen;
     document.getElementById("select151").src=equipo2[0].imagen;
     document.getElementById("select152").src=equipo1[1].imagen;
@@ -189,14 +192,42 @@ const colocaResultadoTeam = (ganador, W1, W2) => {
     document.getElementById("select154").src=equipo1[2].imagen;
     document.getElementById("select155").src=equipo2[2].imagen;
     
-    if (ganador == "Equipo1"){
-        document.getElementById("textoResultadoTeam").innerHTML = (ganador + " ha ganado la batalla por " + W1 + "combates a " + W2);
 
-    }else if (ganador == "Equipo2") {
-        document.getElementById("textoResultadoTeam").innerHTML = (ganador + " ha ganado la batalla por " + W2 + "combates a " + W1);    
+    if (W1> W2){
+        mensajeGanador = "El equipo1 gana la batalla con "
+        document.getElementById("resulTeam").innerHTML = (mensajeGanador + W1 + " victorias a " + W2);
+    }else {
+        mensajeGanador = "El equipo2 gana la batalla."
+        document.getElementById("resulTeam").innerHTML = (mensajeGanador + W2 + " contra " + W1);
     }
 
-    
+    if (equipo1[0].vida > equipo2[0].vida){
+        mensaje1 = equipo1[0].nombre + " ha ganado a " + equipo2[0].nombre;
+        document.getElementById("restulTexto1").innerHTML = (mensaje1);
+    }else {
+        mensaje1 = equipo2[0].nombre + " ha ganado a " + equipo1[0].nombre;
+        document.getElementById("restulTexto1").innerHTML = (mensaje1);
+    }
+
+    if (equipo1[1].vida > equipo2[1].vida){
+        mensaje2 = equipo1[1].nombre + " ha ganado a " + equipo2[1].nombre;
+        document.getElementById("resulTexto2").innerHTML = (mensaje2);
+    }else {
+        mensaje2 = equipo2[1].nombre + " ha ganado a " + equipo1[1].nombre;
+        document.getElementById("resulTexto2").innerHTML = (mensaje2);
+    }
+
+    if (equipo1[2].vida > equipo2[2].vida){
+        mensaje3 = equipo1[2].nombre + " ha ganado a " + equipo2[2].nombre;
+        document.getElementById("resulTexto3").innerHTML = (mensaje3);
+    }else {
+        mensaje3 = equipo2[2].nombre + " ha ganado a " + equipo1[2].nombre;
+        document.getElementById("resulTexto3").innerHTML = (mensaje3);
+    }
+
+
+
+
     document.getElementById("textoResultado").innerHTML = (mensajeGanador);
 }
 
@@ -207,16 +238,17 @@ const comienzaPartidaTeam = (player) => {
    let min=0;
 
     if ((round == 3)  ){
-        console.log("Entra en el if principal. Termina la partida se llama a cambiaPantalla");
-        colocaResultadoTeam();
         cambiaPantalla("pantalla8");
+
+        colocaResultadoTeam();
+
 
     }else if (round <= 2){
         if (player == 1){
             console.log("Ataca el jugador 1.");
             equipo1[round].atacar(equipo2[round]);
             actualizaVidaTeam(player);
-        }else{
+        }else {
             console.log("Ataca el jugador 2.")
             equipo2[round].atacar(equipo1[round]);
             actualizaVidaTeam(player);
@@ -227,16 +259,23 @@ const comienzaPartidaTeam = (player) => {
 }
 
 const compruebaPartida = (jugadorX) => {
-    console.log(equipo2[round].vida);
-    if (equipo2[round].vida < 0){
-        console.log("Ha ganado la partida el equipo 1 con el luchador: ", equipo1[round].nombre);
-        round++;
+    if(round == 3){
+        colocaResultadoTeam();
+    }else if (equipo2[round].vida < 0){
+        round++;        
+        if(round <3){
+            colocaLuchaTeam();
+            actualizaVidaTeam();
+        }
+
     }else if(equipo1[round].vida < 0){
-        console.log("Ha ganado la partida el equipo 2 con el luchador: ", equipo2[round].nombre);
         round++;
+        if(round <3){
+            colocaLuchaTeam();
+            actualizaVidaTeam();
+        }
     }else{
         cambiarBotonTeam(jugadorX);
-        console.log("Comienza el round: ", round);
     }
 }
 
@@ -248,21 +287,28 @@ const escenarioSelTeam = (mapa, escenario) => {
     document.getElementById("escenarioTeam").src=arrEscenarios[mapa];
     document.getElementById("pantallaLuchaTeam").style.backgroundImage=arrEscenarios[mapa];
     
+    if (equipo1[0].velocidad >= equipo2[0].velocidad){
+        document.getElementById('boton4').disabled = '';
+
+    }else {
+        document.getElementById('boton3').disabled = '';
+
+    }
 
     cambiaPantalla("pantalla9");
     colocaLuchaTeam();
 }
 
 const colocaLuchaTeam = () => {
-    if (W1 + W2 == 0){
+    if (round == 0){
         document.getElementById("select55").src=equipo1[round].animacion;
         document.getElementById("select56").src=equipo2[round].animacion;
 
 
-    }else if (W1 + W2 == 1){
+    }else if (round == 1){
         document.getElementById("select55").src=equipo1[round].animacion;
         document.getElementById("select56").src=equipo2[round].animacion;
-    }else if (W1 + W2 == 2){
+    }else if (round == 2){
         document.getElementById("select55").src=equipo1[round].animacion;
         document.getElementById("select56").src=equipo2[round].animacion;
     }
@@ -288,6 +334,7 @@ const actualizaVidaTeam = (player) => {
     let vidaBarra2 = equipo2[round].vida;
 
     if ((vidaBarra1 <= 0)){
+        W2++;
         document.getElementById("vida3").style.width = 0 +"vw";
         compruebaPartida(player);
         console.log("Equipo 2 gana el round: ", round);
@@ -298,6 +345,7 @@ const actualizaVidaTeam = (player) => {
         document.getElementById("select56").src = equipo2[round].animacion;
 
     } else if ((vidaBarra2 <= 0)){
+        W1++;
         document.getElementById("vida4").style.width = 0 +"vw";
         compruebaPartida(player);
         console.log("Equipo 1 gana el round: ", round);
