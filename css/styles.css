@@ -258,7 +258,7 @@ h1{
     width: 5vw;
     border: white solid 0.3em;
     margin:0.3em;
-    border-radius: 0.31em;
+    border-radius: 0.1em;
 }
 
 #time{
@@ -282,15 +282,23 @@ h1{
 }
 
 .boton{
-    height: 3em;
-    width: 5em;
-    background-color: chartreuse;
+    height: 4em;
+    width: 4em;
+    background-color: red;
+    border-radius: 50%;
+    margin: 1em;
+    position:relative;
+    top: 5em;
+    
+
 }
 
 .boton_desabilitado{
-    height: 3em;
-    width: 5em;
-    color: chartreuse;
+    height: 4em;
+    width: 4em;
+    background-color: red;
+    border-radius: 50%;
+    margin: 1em;
 }
 
 /*PANTALLA DE RESULTADO DE LA PARTIDA 1 vs 1*/
@@ -360,6 +368,16 @@ h1{
     border-radius:0.5em; 
     transform: scaleX(-1);
 }
+.accionScreen{
+    height: 10vh;
+    width: 10vw;
+    margin: 8em;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center; 
+    
+}
 
 #escenarioTeam{
     height: 100vh;
@@ -421,3 +439,7 @@ h1{
 {
     cursor: pointer;
 }
+
+
+
+

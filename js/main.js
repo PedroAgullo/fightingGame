@@ -242,7 +242,7 @@ const compruebaPartida = (jugadorX) => {
 
 
 const escenarioSelTeam = (mapa, escenario) => {
-    let arrEscenarios = ["img/escenario0.gif", "img/escenario1.gif", "img/escenario2.gif", "img/escenario3.gif", "img/escenario4.gif" ];
+    let arrEscenarios = ["img/escenario0.gif", "img/escenario1.gif", "img/escenario2.gif", "img/escenario3.gif", "img/escenario4.gif", "img/escenario5.gif", "img/escenario6.gif", "img/escenario7.gif", "img/escenario8.gif", "img/escenario9.gif" ];
     document.getElementById("intro").style.backgroundImage="";
 
     document.getElementById("escenarioTeam").src=arrEscenarios[mapa];
