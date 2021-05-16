@@ -54,4 +54,7 @@ Cuando uno de los dos se queda sin energía, nos lleva a la pantalla que muestra
 </ul>
 
 
+<h4>Ejemplo de pantalla de lucha del juego</h4>
+![Image text](img/readme2.png)
+<br>
 Pedro AGulló Marco
