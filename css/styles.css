@@ -84,6 +84,12 @@ h1{
     border: orange solid 0.3em; 
 }
 
+.picFighter:hover{
+    cursor:pointer;
+}
+.picdelReves:hover{
+    cursor:pointer;
+}
 .picdelReves{
     width: 8vw;
     height: 20vh;
@@ -103,7 +109,9 @@ h1{
     border-radius:0.5em;  
     border: orange solid 0.3em; 
 }
-
+.picStage{
+    cursor:pointer;
+}
 
 .seleccionado{
     transition: 0.5s;
@@ -248,8 +256,15 @@ h1{
 .centroBarraVida{
     height: 10vh;
     width: 5vw;
+    border: white solid 0.3em;
+    margin:0.3em;
+    border-radius: 0.31em;
 }
 
+#time{
+    height: 10vh;
+    width: 5vw;
+}
 
 .divisor{
     height: 40vh;
@@ -395,4 +410,14 @@ h1{
     background-color: yellow;
     border-radius: 0.em; 
     transition: width 0.5s;
+}
+#playAgain:hover{
+    cursor: pointer;
+}
+#playAgain2:hover{
+    cursor: pointer;
+}
+.pulsar:hover
+{
+    cursor: pointer;
 }

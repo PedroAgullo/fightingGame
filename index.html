@@ -26,8 +26,8 @@
                <div class="cajaMenu">
                 <h1 style="color: blue">SELECT GAME MODE</h1>
                 <br>
-                <h1 onclick="cambiaPantalla('pantalla7')">1 VS 1</h1>
-                <h1 onclick="cambiaPantalla('pantalla3')">TEAM BATTLE</h1>
+                <h1 class="pulsar" onclick="cambiaPantalla('pantalla7')">1 VS 1</h1>
+                <h1 class="pulsar" onclick="cambiaPantalla('pantalla3')">TEAM BATTLE</h1>
             </div>
         </div>
     </section>
@@ -144,7 +144,9 @@
                     <div id="vida1"></div>
                 </div>
 
-                <div class="centroBarraVida"></div>
+                <div class="centroBarraVida">
+                    <img id="time" src="img/time.png" alt="">
+                </div>
 
                 <div class="barraVida2">
                     <div id="vida2"></div>
@@ -186,7 +188,7 @@
             </div>
 
             <div class="restar">
-                <h1 id="playAgain">RESTART</h1>
+                <h1 id="playAgain">NEW GAME</h1>
             </div>        
         </div>
     </section> 
@@ -286,7 +288,7 @@
             </div>           
 
 
-            <h1 id="playAgain2">PULSA PARA EMPEZAR OTRA</h1>
+            <h1 id="playAgain2">NEW GAME</h1>
         
         
         </div>
