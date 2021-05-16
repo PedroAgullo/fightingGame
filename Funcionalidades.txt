@@ -1,8 +1,0 @@
-Modo arcade / rol con subidas de nivel cada vez que ganas una pelea.
-
-ScoreBoard 
-
-Barra deslizandose y dar en un punto para ataque extra.
-Barra deslizandose y dar en un punto para defensa extra.
-
-¿Objetos durante la pelea?
