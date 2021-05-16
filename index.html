@@ -21,13 +21,14 @@
     </section>
 
     <!-- PANTALLA DEL MENU PRINCIPAL -->
-    <section class="secView" id="pantalla2" style="display:none">        
+    <section class="secView" id="pantalla2" style="display:none">   
         <div class="menuPrincipal">
-            <h1>MENÚ PRINCIPAL</h1>
-            <br>
-            <h1 onclick="cambiaPantalla('pantalla7')">1 VS 1</h1>
-            <h1 onclick="cambiaPantalla('pantalla3')">TEAM BATTLE</h1>
-            <h1>SCORE BOARD</h1>
+               <div class="cajaMenu">
+                <h1 style="color: blue">SELECT GAME MODE</h1>
+                <br>
+                <h1 onclick="cambiaPantalla('pantalla7')">1 VS 1</h1>
+                <h1 onclick="cambiaPantalla('pantalla3')">TEAM BATTLE</h1>
+            </div>
         </div>
     </section>
 
@@ -36,7 +37,10 @@
     <!-- PANTALLA 1 VS 1 -->
 
     <section class="secView" id="pantalla7" style="display:none">
-        <h1>SELECCION DE PERSONAJE</h1>
+        <div class="upVs">
+            <h1>VS MODE</h1>
+        </div>
+
         <div class="personaje">
             <div id="11" onclick="vsSel(1)"><img class="picFighter" src="img/p1.png"></div>
             <div id="12" onclick="vsSel(2)"><img class="picFighter" src="img/p2.png"></div>
@@ -70,7 +74,9 @@
 
     <!-- PANTALLA ELECCION DE PERSONAJE TEAM BATTLE-->
     <section class="secView" id="pantalla3" style="display:none">
-        <h1>SELECCION DE PERSONAJE</h1>
+        <div class="upVs">
+            <h1>TEAM BATTLE</h1>
+        </div>        
         <div class="personaje">
             <div id="1" onclick="luchadorSel(1)"><img class="picFighter" src="img/p1.png"></div>
             <div id="2" onclick="luchadorSel(2)"><img class="picFighter" src="img/p2.png"></div>
@@ -104,7 +110,9 @@
 
     <!-- PANTALLA ELECCION DE MAPA VS -->
     <section class="secView" id="pantalla4" style="display:none">
-        <h1>SELECCION DE ESCENARIO</h1>
+        <div class="upVs">
+            <h1>SELECCION DE ESCENARIO</h1>
+        </div>            
         <div class="personaje">
             <div id="00" onclick="escenarioSel(0, 'escenario')"><img class="picStage" src="img/escenario0.gif"></div>
             <div id="01" onclick="escenarioSel(1, 'escenario')"><img class="picStage" src="img/escenario1.gif"></div>
@@ -112,6 +120,14 @@
             <div id="03" onclick="escenarioSel(3, 'escenario')"><img class="picStage" src="img/escenario3.gif"></div>
             <div id="04" onclick="escenarioSel(4, 'escenario')"><img class="picStage" src="img/escenario4.gif"></div>
         </div>
+    </div>            
+    <div class="personaje">
+        <div id="05" onclick="escenarioSel(5, 'escenario')"><img class="picStage" src="img/escenario5.gif"></div>
+        <div id="06" onclick="escenarioSel(6, 'escenario')"><img class="picStage" src="img/escenario6.gif"></div>
+        <div id="07" onclick="escenarioSel(7, 'escenario')"><img class="picStage" src="img/escenario7.gif"></div>
+        <div id="08" onclick="escenarioSel(8, 'escenario')"><img class="picStage" src="img/escenario8.gif"></div>
+        <div id="09" onclick="escenarioSel(9, 'escenario')"><img class="picStage" src="img/escenario9.gif"></div>
+    </div>
     </section>
 
     <!-- PANTALLA DE LUCHA vs -->
@@ -160,34 +176,37 @@
     <!-- PANTALLA DE RESULTADO  1 vs 1-->
     <section class="secView" id="pantalla6" style="display:none">
         <div class="resultado">
-            <h1 id="textoResultado"></h1>
-            <div class="resultadoTexto">
-                
-            </div>
-
             <div class="resultadoLuchadores">
                 <div><img id="select100" class="luchadores1" src="/img/white.png"></div>
-
                 <div><img id="select101" class="luchadores2" src="/img/white.png"></div>
-
-
             </div>           
             
-            <h1 id="playAgain" >PULSA PARA EMPEZAR OTRA</h1>
-        
-        
+            <div class="resultadoTexto">
+                <h1 id="textoResultado"></h1>
+            </div>
+
+            <div class="restar">
+                <h1 id="playAgain">RESTART</h1>
+            </div>        
         </div>
     </section> 
 
         <!-- PANTALLA ELECCION DE MAPA TEAM -->
         <section class="secView" id="pantalla10" style="display:none">
-            <h1>SELECCION DE ESCENARIO TEAM</h1>
+            <h1>SELECCION DE ESCENARIO</h1>
             <div class="personaje">
                 <div id="000" onclick="escenarioSelTeam(0, 'escenario')"><img class="picStage" src="img/escenario0.gif"></div>
                 <div id="001" onclick="escenarioSelTeam(1, 'escenario')"><img class="picStage" src="img/escenario1.gif"></div>
                 <div id="002" onclick="escenarioSelTeam(2, 'escenario')"><img class="picStage" src="img/escenario2.gif"></div>
                 <div id="003" onclick="escenarioSelTeam(3, 'escenario')"><img class="picStage" src="img/escenario3.gif"></div>
                 <div id="004" onclick="escenarioSelTeam(4, 'escenario')"><img class="picStage" src="img/escenario4.gif"></div>
+            </div>
+            <div class="personaje">
+                <div id="000" onclick="escenarioSelTeam(5, 'escenario')"><img class="picStage" src="img/escenario5.gif"></div>
+                <div id="001" onclick="escenarioSelTeam(6, 'escenario')"><img class="picStage" src="img/escenario6.gif"></div>
+                <div id="002" onclick="escenarioSelTeam(7, 'escenario')"><img class="picStage" src="img/escenario7.gif"></div>
+                <div id="003" onclick="escenarioSelTeam(8, 'escenario')"><img class="picStage" src="img/escenario8.gif"></div>
+                <div id="004" onclick="escenarioSelTeam(9, 'escenario')"><img class="picStage" src="img/escenario9.gif"></div>
             </div>
         </section>
         <!-- PANTALLA DE LUCHA TEAM BATTLE-->
@@ -211,7 +230,9 @@
                   </div>
               </div>
               
-              <div class="divisor"></div>
+              <div class="divisor">
+                  <div class="textoCombate"></div>
+              </div>
               <div class="personajes">
                   <div class="team1" >
                       <div><img id="select55" class="luchadores1" src="/img/white.png"></div>
