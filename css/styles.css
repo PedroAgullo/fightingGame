@@ -24,7 +24,7 @@ h1{
     background-image: url(img/menuScreen.png);
     background-color: black;
     background-size: cover;
-    z-index: -2;
+    /* z-index: -2; */
 
 }
 
@@ -54,7 +54,7 @@ h1{
     /* background-image: url(/img/art-of-fighting-10.jpg); */
     background-image: url(img/snkScreen.png);
     background-size: cover;
-    z-index: -2;
+    /* z-index: -2; */
     cursor: pointer;
 }
 
